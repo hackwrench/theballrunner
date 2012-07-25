@@ -72,8 +72,7 @@
         _rotationGestureRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotationGesture:)];
         _rotationGestureRecognizer.delegate = self;
         
-        
-        
+             
 		// Enable shadow rendering
 		[Isgl3dDirector sharedInstance].shadowRenderingMethod = Isgl3dShadowPlanar;
 		[Isgl3dDirector sharedInstance].shadowAlpha = 0.4;
@@ -95,8 +94,8 @@
         
         
 		// Create textures - matearial
-		_beachBallMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"ball.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
-		_isglLogo = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"cardboard.jpg" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
+		_beachBallMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"BeachBall.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
+		_isglLogo = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"crate.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
         _standardMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"cardboard.png" shininess:0.9];
 		
         
@@ -109,7 +108,7 @@
 		
         
         // Create sphere mesh node to render stars(SKY): double sided so that the stars are rendered "inside", and without lighting
-		Isgl3dSphere * sphere = [Isgl3dSphere meshWithGeometry:2000 longs:32 lats:8];
+		Isgl3dSphere * sphere = [Isgl3dSphere meshWithGeometry:1000 longs:32 lats:8];
 		Isgl3dTextureMaterial * starsMaterial = [Isgl3dTextureMaterial materialWithTextureFile:@"stars.png" shininess:0 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
 		Isgl3dMeshNode * stars = [self.scene createNodeWithMesh:sphere andMaterial:starsMaterial];
 		stars.doubleSided = YES;
@@ -123,7 +122,7 @@
         [self createPlayerWithPos:iv3(0,5,-20 ) andRadius:1];
         
         //create animation
-        //[self createPodAnimation];
+        [self createPodAnimation];
         
         //create obstacle
         [self createObstacle];
@@ -257,10 +256,7 @@
     //set camera position is behind and higher than the target
     [self.camera setPositionValues:_ballNode.position.x y:_ballNode.position.y+2 z:_ballNode.position.z-7];
     
-    
-    
-    
-    
+     
 	// Get time since last step
 	NSDate * currentTime = [[NSDate alloc] init];
 	
@@ -269,7 +265,7 @@
 	// Add new object every 0.5 seconds
 	if (timeInterval > 2 && _numObstacle < 30) 
     {
-        [self createCube];
+        //[self createCube];
         _numObstacle++;
 		[_lastStepTime release];
 		_lastStepTime = currentTime;
@@ -312,7 +308,7 @@
     //create material
     Isgl3dTextureMaterial * woodMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"wood.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:YES repeatY:YES];
     
-    Isgl3dTextureMaterial * woodMaterial1 = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"wood.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:YES repeatY:YES];
+    Isgl3dTextureMaterial * woodMaterial1 = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"wall.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:YES repeatY:YES];
     
     
 	
@@ -513,7 +509,7 @@
 	
     [_physicsWorld addPhysicsObject:physicsObject];
     
-	[_physicsObjects addObject:physicsObject];
+	//[_physicsObjects addObject:physicsObject];
 	
 	return [physicsObject autorelease];
     
