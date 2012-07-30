@@ -33,12 +33,15 @@
 @synthesize node = _node;
 @synthesize rigidBody = _rigidBody;
 
-+ (id) physicsObjectWithNode:(Isgl3dNode *)node andRigidBody:(btRigidBody *)rigidBody {
++ (id) physicsObjectWithNode:(Isgl3dNode *)node andRigidBody:(btRigidBody *)rigidBody 
+{
 	return [[[self alloc] initWithNode:node andRigidBody:rigidBody] autorelease];
 }
 
-- (id) initWithNode:(Isgl3dNode *)node andRigidBody:(btRigidBody *)rigidBody {
-    if ((self = [super init])) {
+- (id) initWithNode:(Isgl3dNode *)node andRigidBody:(btRigidBody *)rigidBody 
+{
+    if ((self = [super init])) 
+    {
     	_node = [node retain];
     	_rigidBody = rigidBody;
     	
@@ -47,7 +50,8 @@
     return self;
 }
 
-- (void) dealloc {
+- (void) dealloc 
+{
 	[_node release];
 	
 	delete _rigidBody->getMotionState();
