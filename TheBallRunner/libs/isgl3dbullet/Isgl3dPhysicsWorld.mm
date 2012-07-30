@@ -31,12 +31,15 @@
 
 @implementation Isgl3dPhysicsWorld
 
-+ (id) physicsWorld {
++ (id) physicsWorld 
+{
 	return [[[self alloc] init] autorelease];
 }
 
-- (id) init {
-    if ((self = [super init])) {
+- (id) init 
+{
+    if ((self = [super init])) 
+    {
     	
     	_lastStepTime = [[NSDate alloc] init];
        	_physicsObjects = [[NSMutableArray alloc] init];
@@ -45,7 +48,8 @@
     return self;
 }
 
-- (void) dealloc {
+- (void) dealloc 
+{
 	
 	[_lastStepTime release];
 	[_physicsObjects release];
@@ -53,8 +57,10 @@
 	[super dealloc];
 }
 
-- (void) setDiscreteDynamicsWorld:(btDiscreteDynamicsWorld *)discreteDynamicsWorld {
+- (void) setDiscreteDynamicsWorld:(btDiscreteDynamicsWorld *)discreteDynamicsWorld 
+{
 	_discreteDynamicsWorld = discreteDynamicsWorld;
+    
 }
 
 - (void) addPhysicsObject:(Isgl3dPhysicsObject3D *)physicsObject {
@@ -66,7 +72,8 @@
 	[_physicsObjects addObject:physicsObject];
 }
 
-- (void) removePhysicsObject:(Isgl3dPhysicsObject3D *)physicsObject {
+- (void) removePhysicsObject:(Isgl3dPhysicsObject3D *)physicsObject 
+{
 	// Remove from render list
 	[physicsObject.node removeFromParent];
 
@@ -77,7 +84,8 @@
 	[_physicsObjects removeObject:physicsObject];
 }
 
-- (void) clearAll {
+- (void) clearAll 
+{
 	[super clearAll];
 	
 	for (Isgl3dPhysicsObject3D * physicsObject in _physicsObjects) {

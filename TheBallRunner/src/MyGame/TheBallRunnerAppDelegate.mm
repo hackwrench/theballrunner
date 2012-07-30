@@ -68,11 +68,14 @@
 	[[Isgl3dDirector sharedInstance] run];
 }
 
-- (void) dealloc {
-	if (_viewController) {
+- (void) dealloc 
+{
+	if (_viewController) 
+    {
 		[_viewController release];
 	}
-	if (_window) {
+	if (_window) 
+    {
 		[_window release];
 	}
 	

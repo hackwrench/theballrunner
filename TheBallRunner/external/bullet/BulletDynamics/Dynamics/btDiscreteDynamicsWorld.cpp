@@ -224,7 +224,6 @@ void	btDiscreteDynamicsWorld::synchronizeMotionStates()
 	}
 }
 
-
 int	btDiscreteDynamicsWorld::stepSimulation( btScalar timeStep,int maxSubSteps, btScalar fixedTimeStep)
 {
 	startProfiling(timeStep);
@@ -342,7 +341,7 @@ void	btDiscreteDynamicsWorld::internalSingleStepSimulation(btScalar timeStep)
 	}	
 }
 
-void	btDiscreteDynamicsWorld::setGravity(const btVector3& gravity)
+void btDiscreteDynamicsWorld::setGravity(const btVector3& gravity)
 {
 	m_gravity = gravity;
 	for ( int i=0;i<m_nonStaticRigidBodies.size();i++)

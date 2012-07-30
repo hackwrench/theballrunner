@@ -19,7 +19,7 @@
 #include "btBox2dShape.h"
 
 
-#define PLANE_WIDTH 2000
+#define PLANE_WIDTH 1000
 #define PLANE_HEIGH 20
 
 
@@ -41,6 +41,7 @@
 - (void)pinchGesture:(UIPinchGestureRecognizer *)gestureRecognizer;
 - (void)rotationGesture:(UIRotationGestureRecognizer *)gestureRecognizer;
 - (void)createPodAnimation;
+- (void)collisionCallBack;
 
 @end
 
@@ -97,8 +98,7 @@
 		_beachBallMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"BeachBall.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
 		_isglLogo = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"crate.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
         _standardMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"cardboard.png" shininess:0.9];
-		
-        
+    
         //create mesh one time for multi object cube
 		float width = 2.0;
         _cubeMesh = [[Isgl3dCube alloc] initWithGeometry:width height:width depth:width nx:2 ny:2];
@@ -106,9 +106,8 @@
 		// Create two nodes for the different meshes from physic world
 		_cubesNode = [[_physicsWorld createNode] retain];
 		
-        
         // Create sphere mesh node to render stars(SKY): double sided so that the stars are rendered "inside", and without lighting
-		Isgl3dSphere * sphere = [Isgl3dSphere meshWithGeometry:1000 longs:32 lats:8];
+		Isgl3dSphere * sphere = [Isgl3dSphere meshWithGeometry:600 longs:32 lats:8];
 		Isgl3dTextureMaterial * starsMaterial = [Isgl3dTextureMaterial materialWithTextureFile:@"stars.png" shininess:0 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
 		Isgl3dMeshNode * stars = [self.scene createNodeWithMesh:sphere andMaterial:starsMaterial];
 		stars.doubleSided = YES;
@@ -119,7 +118,7 @@
         [self createPlaneWith:PLANE_WIDTH _height:PLANE_HEIGH];
         
         // create player
-        [self createPlayerWithPos:iv3(0,5,-20 ) andRadius:1];
+        [self createPlayerWithPos:iv3(0,5,-450 ) andRadius:1];
         
         //create animation
         [self createPodAnimation];
@@ -232,9 +231,7 @@
         player.rigidBody->setLinearVelocity(btVector3(0,10,30));
         
     } 
-    
-    
-    
+
     //set start game
     isStart=YES;
     
@@ -296,7 +293,6 @@
 	[objectsToDelete release];
     
 	
-    
 	// update camera
 	//[_cameraController update];
 }
@@ -365,11 +361,15 @@
 	
     // Create skeleton node	
     Isgl3dSkeletonNode * skeleton = [self.scene createSkeletonNode];
-    skeleton.position = iv3(0, -10 , 0);
+    skeleton.position = iv3(0, 0 , -450);
+    [skeleton setScale:0.05];
+    //run action
+    id action1 = [Isgl3dActionMoveTo actionWithDuration:50 position:iv3(0,0,1000)];
+    [skeleton runAction:action1];
     
     // Add meshes to skeleton
     [podImporter addMeshesToScene:skeleton];
-    [skeleton setAlphaWithChildren:0.8];
+    [skeleton setAlphaWithChildren:1];
     [podImporter addBonesToSkeleton:skeleton];
     [skeleton enableShadowCastingWithChildren:YES];
 	
@@ -452,7 +452,7 @@
     
     Isgl3dCube* _obstacleMesh = [[Isgl3dCube alloc] initWithGeometry:5 height:5 depth:2 nx:5 ny:5];
     
-    for(int i=0;i<50 ;i ++)
+    for(int i=0;i<20 ;i ++)
     {
         btCollisionShape* _obstacleShape = new btBox2dShape(btVector3(2.5, 2.5, 1));
         Isgl3dMeshNode * wallNode = [_physicsWorld createNodeWithMesh:_obstacleMesh andMaterial:[_material autorelease]];
@@ -509,9 +509,17 @@
 	
     [_physicsWorld addPhysicsObject:physicsObject];
     
+    
 	//[_physicsObjects addObject:physicsObject];
 	
 	return [physicsObject autorelease];
+    
+}
+
+//=============== collision call back =======================
+- (void)collisionCallBack
+{
+    
     
 }
 
