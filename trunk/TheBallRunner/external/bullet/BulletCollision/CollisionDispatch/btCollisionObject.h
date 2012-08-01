@@ -15,8 +15,9 @@ subject to the following restrictions:
 
 #ifndef COLLISION_OBJECT_H
 #define COLLISION_OBJECT_H
-
 #include "LinearMath/btTransform.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 //island management, m_activationState1
 #define ACTIVE_TAG 1
@@ -42,7 +43,7 @@ typedef btAlignedObjectArray<class btCollisionObject*> btCollisionObjectArray;
 #define btCollisionObjectDataName "btCollisionObjectFloatData"
 #endif
 
-
+using namespace std;
 /// btCollisionObject can be used to manage collision detection objects. 
 /// btCollisionObject maintains all information that is needed for a collision detection: Shape, Transform and AABB proxy.
 /// They can be added to the btCollisionWorld.
@@ -76,12 +77,13 @@ protected:
 	btCollisionShape*		m_rootCollisionShape;
 
 	int				m_collisionFlags;
-
+    // object tag
+    int             m_tag;
 	int				m_islandTag1;
 	int				m_companionId;
 
 	int				m_activationState1;
-	btScalar			m_deactivationTime;
+	btScalar		m_deactivationTime;
 
 	btScalar		m_friction;
 	btScalar		m_restitution;
@@ -363,13 +365,19 @@ public:
 	{
 		return	m_companionId;
 	}
-
 	void	setCompanionId(int id)
 	{
 		m_companionId = id;
 	}
-
-	SIMD_FORCE_INLINE btScalar			getHitFraction() const
+    SIMD_FORCE_INLINE int getTag() const
+    {
+        return m_tag;
+    }
+    void    setTag(int tag)
+    {
+        m_tag = tag;
+    }
+   	SIMD_FORCE_INLINE btScalar	 getHitFraction() const
 	{
 		return m_hitFraction; 
 	}

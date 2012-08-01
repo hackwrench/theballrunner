@@ -24,11 +24,13 @@
  */
 
 #import "Isgl3dNode.h"
+#import "Const.h"
 
 @class Isgl3dPhysicsObject3D;
 class btRigidBody;
 class btDiscreteDynamicsWorld;
 class btCollisionShape;
+class btCollisionObject;
 
 /**
  * The Isgl3dPhysicsWorld provides a wrapper to the btDiscreteDynamicsWorld and contains all the Isgl3dPhysicsObject3D objects. 
@@ -43,6 +45,8 @@ class btCollisionShape;
 
 	NSDate * _lastStepTime;
 	NSMutableArray * _physicsObjects;
+    
+    btCollisionObject       *_objects;
 
 }
 
@@ -95,5 +99,15 @@ class btCollisionShape;
  * @return (autorelease) The created Isgl3dPhysicsObject3D containing the btRigidBody and the Isgl3dNode.
  */
 - (Isgl3dPhysicsObject3D *) createPhysicsObject:(Isgl3dNode *)node shape:(btCollisionShape *)shape mass:(float)mass restitution:(float)restitution;
+
+/* 
+ 
+ *Test collision detection by bridge with bullet
+ *Using Collision world
+ *
+ *
+ 
+ */
+-(void)collisionTest;
 
 @end

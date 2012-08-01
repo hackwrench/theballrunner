@@ -178,8 +178,6 @@
         player.rigidBody->setLinearVelocity(btVector3(0,0,30));
         player.rigidBody->applyCentralImpulse(btVector3(-30,0,0));
     }
-    
-    
 }
 
 - (void)nodeTap:(UITapGestureRecognizer *)gestureRecognizer
@@ -247,6 +245,10 @@
 /******************** game update **********************************/
 - (void) tick:(float)dt 
 {
+    
+    
+    //COLLISION TEST
+    [_physicsWorld collisionTest];
     
     //set camera look at higher than target
     [self.camera setLookAt:iv3(_ballNode.position.x,_ballNode.position.y+2,_ballNode.position.z)];
@@ -480,7 +482,7 @@
 	shape->calculateLocalInertia(mass, localInertia);
 	btRigidBody * rigidBody = new btRigidBody(mass, motionState, shape, localInertia);
 	rigidBody->setRestitution(restitution);
-    
+    rigidBody->setCompanionId(888);
 	Isgl3dPhysicsObject3D * physicsObject = [[Isgl3dPhysicsObject3D alloc] initWithNode:node andRigidBody:rigidBody];
 	[_physicsWorld addPhysicsObject:physicsObject];
     
@@ -504,6 +506,8 @@
 	btRigidBody * rigidBody = new btRigidBody(mass, motionState, shape, localInertia);
     
 	rigidBody->setRestitution(restitution);
+    
+    rigidBody->setCompanionId(999);
     
 	Isgl3dPhysicsObject3D * physicsObject = [[Isgl3dPhysicsObject3D alloc] initWithNode:node andRigidBody:rigidBody];
 	
