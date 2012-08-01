@@ -28,6 +28,9 @@
 #import "Isgl3dMotionState.h"
 
 #import "btBulletDynamicsCommon.h"
+#include "btBulletCollisionCommon.h"
+#include "LinearMath/btIDebugDraw.h"
+
 
 @implementation Isgl3dPhysicsWorld
 
@@ -138,5 +141,36 @@
 	
 	return [physicsObject autorelease];
 }
-
+//collision test
+-(void)collisionTest
+{
+    _discreteDynamicsWorld->debugDrawWorld();
+    int numManifolds = _discreteDynamicsWorld->getDispatcher()->getNumManifolds();
+    for(int i=0;i< numManifolds;i++)
+    {
+        
+        btPersistentManifold* contactManifold = _discreteDynamicsWorld->getDispatcher()->getManifoldByIndexInternal(i);
+        btCollisionObject* obA = static_cast<btCollisionObject*>(contactManifold->getBody0());
+        btCollisionObject* obB = static_cast<btCollisionObject*>(contactManifold->getBody1());
+        
+        
+        if(obA->getTag()== PLAYER_TAG && obB->getTag() == OBSTACLE_TAG)
+        {
+            NSLog(@"BALL COLLISION");
+        }
+        
+        int numContacts = contactManifold->getNumContacts();
+        for (int j=0;j<numContacts;j++)
+        {
+            btManifoldPoint& pt = contactManifold->getContactPoint(j);
+            btVector3 ptA = pt.getPositionWorldOnA();
+            btVector3 ptB = pt.getPositionWorldOnB();
+            
+            NSLog(@"PoinA(%f,%f,%f)",ptA.x(),ptA.y(),ptA.z());
+            NSLog(@"PoinB(%f,%f,%f)",ptB.x(),ptB.y(),ptB.z());
+        }
+        //you can un-comment out this line, and then all points are removed
+        //contactManifold->clearManifold();  
+    }
+}
 @end

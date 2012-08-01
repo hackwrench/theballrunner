@@ -27,14 +27,6 @@
 		CE992A2115B7FF5A00A2A297 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE992A2015B7FF5A00A2A297 /* CoreGraphics.framework */; };
 		CE992A2315B7FF5A00A2A297 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE992A2215B7FF5A00A2A297 /* UIKit.framework */; };
 		CE992A2515B7FF5A00A2A297 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE992A2415B7FF5A00A2A297 /* Foundation.framework */; };
-		CE992A2A15B7FF5A00A2A297 /* capture.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CE992A2915B7FF5A00A2A297 /* capture.fsh */; };
-		CE992A2C15B7FF5A00A2A297 /* capture.vsh in Resources */ = {isa = PBXBuildFile; fileRef = CE992A2B15B7FF5A00A2A297 /* capture.vsh */; };
-		CE992A2E15B7FF5A00A2A297 /* generic.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CE992A2D15B7FF5A00A2A297 /* generic.fsh */; };
-		CE992A3015B7FF5A00A2A297 /* generic.vsh in Resources */ = {isa = PBXBuildFile; fileRef = CE992A2F15B7FF5A00A2A297 /* generic.vsh */; };
-		CE992A3215B7FF5A00A2A297 /* particle.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CE992A3115B7FF5A00A2A297 /* particle.fsh */; };
-		CE992A3415B7FF5A00A2A297 /* particle.vsh in Resources */ = {isa = PBXBuildFile; fileRef = CE992A3315B7FF5A00A2A297 /* particle.vsh */; };
-		CE992A3615B7FF5A00A2A297 /* shadowMap.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CE992A3515B7FF5A00A2A297 /* shadowMap.fsh */; };
-		CE992A3815B7FF5A00A2A297 /* shadowMap.vsh in Resources */ = {isa = PBXBuildFile; fileRef = CE992A3715B7FF5A00A2A297 /* shadowMap.vsh */; };
 		CE992A3B15B7FF5A00A2A297 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992A3A15B7FF5A00A2A297 /* Default.png */; };
 		CE992A3D15B7FF5A00A2A297 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992A3C15B7FF5A00A2A297 /* Icon.png */; };
 		CE992A3F15B7FF5A00A2A297 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992A3E15B7FF5A00A2A297 /* Icon@2x.png */; };
@@ -196,14 +188,6 @@
 		CE992C3F15B7FF5F00A2A297 /* PVRTVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE992C3E15B7FF5F00A2A297 /* PVRTVector.cpp */; };
 		CE992C4215B7FF5F00A2A297 /* PVRTVertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE992C4115B7FF5F00A2A297 /* PVRTVertex.cpp */; };
 		CE992C4715B7FF5F00A2A297 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE992C4615B7FF5F00A2A297 /* main.m */; };
-		CE992C7A15B803BC00A2A297 /* capture.fsh in Sources */ = {isa = PBXBuildFile; fileRef = CE992C6E15B803BC00A2A297 /* capture.fsh */; };
-		CE992C7B15B803BC00A2A297 /* capture.vsh in Sources */ = {isa = PBXBuildFile; fileRef = CE992C6F15B803BC00A2A297 /* capture.vsh */; };
-		CE992C7C15B803BC00A2A297 /* generic.fsh in Sources */ = {isa = PBXBuildFile; fileRef = CE992C7015B803BC00A2A297 /* generic.fsh */; };
-		CE992C7D15B803BC00A2A297 /* generic.vsh in Sources */ = {isa = PBXBuildFile; fileRef = CE992C7115B803BC00A2A297 /* generic.vsh */; };
-		CE992C7E15B803BC00A2A297 /* particle.fsh in Sources */ = {isa = PBXBuildFile; fileRef = CE992C7215B803BC00A2A297 /* particle.fsh */; };
-		CE992C7F15B803BC00A2A297 /* particle.vsh in Sources */ = {isa = PBXBuildFile; fileRef = CE992C7315B803BC00A2A297 /* particle.vsh */; };
-		CE992C8015B803BC00A2A297 /* shadowMap.fsh in Sources */ = {isa = PBXBuildFile; fileRef = CE992C7415B803BC00A2A297 /* shadowMap.fsh */; };
-		CE992C8115B803BC00A2A297 /* shadowMap.vsh in Sources */ = {isa = PBXBuildFile; fileRef = CE992C7515B803BC00A2A297 /* shadowMap.vsh */; };
 		CE992C8915B8049000A2A297 /* HelloWorldView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE992C8415B8049000A2A297 /* HelloWorldView.m */; };
 		CE992C8A15B8049000A2A297 /* Isgl3dViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE992C8615B8049000A2A297 /* Isgl3dViewController.m */; };
 		CE992C8B15B8049000A2A297 /* TheBallRunnerAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE992C8815B8049000A2A297 /* TheBallRunnerAppDelegate.mm */; };
@@ -222,7 +206,6 @@
 		CE992EB815B813B800A2A297 /* Crate.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E5115B813B700A2A297 /* Crate.png */; };
 		CE992EB915B813B800A2A297 /* Crate.pvr in Resources */ = {isa = PBXBuildFile; fileRef = CE992E5215B813B700A2A297 /* Crate.pvr */; };
 		CE992EBA15B813B800A2A297 /* debian.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE992E5315B813B700A2A297 /* debian.plist */; };
-		CE992EBB15B813B800A2A297 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E5415B813B700A2A297 /* Default.png */; };
 		CE992EBC15B813B800A2A297 /* DieCube.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE992E5515B813B700A2A297 /* DieCube.pod */; };
 		CE992EBD15B813B800A2A297 /* Earth_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE992E5615B813B700A2A297 /* Earth_1024.jpg */; };
 		CE992EBE15B813B800A2A297 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E5715B813B700A2A297 /* fire.png */; };
@@ -239,16 +222,12 @@
 		CE992EC915B813B800A2A297 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6215B813B700A2A297 /* Icon-Small-50.png */; };
 		CE992ECA15B813B800A2A297 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6315B813B700A2A297 /* Icon-Small.png */; };
 		CE992ECB15B813B800A2A297 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6415B813B700A2A297 /* Icon-Small@2x.png */; };
-		CE992ECC15B813B800A2A297 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6515B813B700A2A297 /* Icon.png */; };
-		CE992ECD15B813B800A2A297 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6615B813B700A2A297 /* Icon@2x.png */; };
-		CE992ECE15B813B800A2A297 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6715B813B700A2A297 /* Info.plist */; };
 		CE992ECF15B813B800A2A297 /* IntroducingPOD_float.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6815B813B700A2A297 /* IntroducingPOD_float.pod */; };
 		CE992ED015B813B800A2A297 /* ItunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6915B813B700A2A297 /* ItunesArtwork */; };
 		CE992ED115B813B800A2A297 /* JoystickThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6A15B813B700A2A297 /* JoystickThumb.png */; };
 		CE992ED215B813B800A2A297 /* legs.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6B15B813B700A2A297 /* legs.png */; };
 		CE992ED315B813B800A2A297 /* mallet.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6C15B813B700A2A297 /* mallet.png */; };
 		CE992ED415B813B800A2A297 /* mallet.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6D15B813B700A2A297 /* mallet.pod */; };
-		CE992ED515B813B800A2A297 /* man.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6E15B813B700A2A297 /* man.pod */; };
 		CE992ED615B813B800A2A297 /* MountainGrass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE992E6F15B813B700A2A297 /* MountainGrass.jpg */; };
 		CE992ED715B813B800A2A297 /* ShadowButton48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E7015B813B700A2A297 /* ShadowButton48x48.png */; };
 		CE992ED815B813B800A2A297 /* ShadowButtonLatched48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992E7115B813B700A2A297 /* ShadowButtonLatched48x48.png */; };
@@ -452,14 +431,6 @@
 		CE992A2015B7FF5A00A2A297 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CE992A2215B7FF5A00A2A297 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE992A2415B7FF5A00A2A297 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CE992A2915B7FF5A00A2A297 /* capture.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = capture.fsh; path = Resources/Shaders/capture.fsh; sourceTree = "<group>"; };
-		CE992A2B15B7FF5A00A2A297 /* capture.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = capture.vsh; path = Resources/Shaders/capture.vsh; sourceTree = "<group>"; };
-		CE992A2D15B7FF5A00A2A297 /* generic.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = generic.fsh; path = Resources/Shaders/generic.fsh; sourceTree = "<group>"; };
-		CE992A2F15B7FF5A00A2A297 /* generic.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = generic.vsh; path = Resources/Shaders/generic.vsh; sourceTree = "<group>"; };
-		CE992A3115B7FF5A00A2A297 /* particle.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = particle.fsh; path = Resources/Shaders/particle.fsh; sourceTree = "<group>"; };
-		CE992A3315B7FF5A00A2A297 /* particle.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = particle.vsh; path = Resources/Shaders/particle.vsh; sourceTree = "<group>"; };
-		CE992A3515B7FF5A00A2A297 /* shadowMap.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = shadowMap.fsh; path = Resources/Shaders/shadowMap.fsh; sourceTree = "<group>"; };
-		CE992A3715B7FF5A00A2A297 /* shadowMap.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = shadowMap.vsh; path = Resources/Shaders/shadowMap.vsh; sourceTree = "<group>"; };
 		CE992A3915B7FF5A00A2A297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		CE992A3A15B7FF5A00A2A297 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		CE992A3C15B7FF5A00A2A297 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
@@ -794,14 +765,6 @@
 		CE992C4315B7FF5F00A2A297 /* PVRTVertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PVRTVertex.h; path = "external/PowerVR_SDK-2.0.8/PVRTVertex.h"; sourceTree = "<group>"; };
 		CE992C4515B7FF5F00A2A297 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		CE992C4615B7FF5F00A2A297 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CE992C6E15B803BC00A2A297 /* capture.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = capture.fsh; sourceTree = "<group>"; };
-		CE992C6F15B803BC00A2A297 /* capture.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = capture.vsh; sourceTree = "<group>"; };
-		CE992C7015B803BC00A2A297 /* generic.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = generic.fsh; sourceTree = "<group>"; };
-		CE992C7115B803BC00A2A297 /* generic.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = generic.vsh; sourceTree = "<group>"; };
-		CE992C7215B803BC00A2A297 /* particle.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = particle.fsh; sourceTree = "<group>"; };
-		CE992C7315B803BC00A2A297 /* particle.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = particle.vsh; sourceTree = "<group>"; };
-		CE992C7415B803BC00A2A297 /* shadowMap.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadowMap.fsh; sourceTree = "<group>"; };
-		CE992C7515B803BC00A2A297 /* shadowMap.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadowMap.vsh; sourceTree = "<group>"; };
 		CE992C8315B8049000A2A297 /* HelloWorldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldView.h; sourceTree = "<group>"; };
 		CE992C8415B8049000A2A297 /* HelloWorldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorldView.m; sourceTree = "<group>"; };
 		CE992C8515B8049000A2A297 /* Isgl3dViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Isgl3dViewController.h; sourceTree = "<group>"; };
@@ -823,7 +786,6 @@
 		CE992E5115B813B700A2A297 /* Crate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Crate.png; sourceTree = "<group>"; };
 		CE992E5215B813B700A2A297 /* Crate.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = Crate.pvr; sourceTree = "<group>"; };
 		CE992E5315B813B700A2A297 /* debian.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = debian.plist; sourceTree = "<group>"; };
-		CE992E5415B813B700A2A297 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CE992E5515B813B700A2A297 /* DieCube.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = DieCube.pod; sourceTree = "<group>"; };
 		CE992E5615B813B700A2A297 /* Earth_1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth_1024.jpg; sourceTree = "<group>"; };
 		CE992E5715B813B700A2A297 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
@@ -840,16 +802,12 @@
 		CE992E6215B813B700A2A297 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		CE992E6315B813B700A2A297 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		CE992E6415B813B700A2A297 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		CE992E6515B813B700A2A297 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		CE992E6615B813B700A2A297 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		CE992E6715B813B700A2A297 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE992E6815B813B700A2A297 /* IntroducingPOD_float.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = IntroducingPOD_float.pod; sourceTree = "<group>"; };
 		CE992E6915B813B700A2A297 /* ItunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItunesArtwork; sourceTree = "<group>"; };
 		CE992E6A15B813B700A2A297 /* JoystickThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JoystickThumb.png; sourceTree = "<group>"; };
 		CE992E6B15B813B700A2A297 /* legs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = legs.png; sourceTree = "<group>"; };
 		CE992E6C15B813B700A2A297 /* mallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mallet.png; sourceTree = "<group>"; };
 		CE992E6D15B813B700A2A297 /* mallet.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = mallet.pod; sourceTree = "<group>"; };
-		CE992E6E15B813B700A2A297 /* man.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = man.pod; sourceTree = "<group>"; };
 		CE992E6F15B813B700A2A297 /* MountainGrass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MountainGrass.jpg; sourceTree = "<group>"; };
 		CE992E7015B813B700A2A297 /* ShadowButton48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShadowButton48x48.png; sourceTree = "<group>"; };
 		CE992E7115B813B700A2A297 /* ShadowButtonLatched48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShadowButtonLatched48x48.png; sourceTree = "<group>"; };
@@ -909,6 +867,7 @@
 		CE992EA815B813B700A2A297 /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood.png; sourceTree = "<group>"; };
 		CE992EAA15B813B800A2A297 /* man.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = man.pod; sourceTree = "<group>"; };
 		CE992EAB15B813B800A2A297 /* Scene_float.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = Scene_float.pod; sourceTree = "<group>"; };
+		CECD806115C925F80059385D /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		FAA64A6815BEFFB300C6A97A /* btBulletCollisionCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btBulletCollisionCommon.h; sourceTree = "<group>"; };
 		FAA64A6915BEFFB300C6A97A /* btBulletDynamicsCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btBulletDynamicsCommon.h; sourceTree = "<group>"; };
 		FAA64A6A15BEFFB300C6A97A /* Bullet-C-Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bullet-C-Api.h"; sourceTree = "<group>"; };
@@ -1280,28 +1239,12 @@
 				CE992C7715B803BC00A2A297 /* SoundEffect */,
 				CE992C7815B803BC00A2A297 /* Texture */,
 				CE992C7915B803BC00A2A297 /* UI */,
-				CE992A2815B7FF5A00A2A297 /* Shaders */,
 				CE992A3915B7FF5A00A2A297 /* Info.plist */,
 				CE992A3A15B7FF5A00A2A297 /* Default.png */,
 				CE992A3C15B7FF5A00A2A297 /* Icon.png */,
 				CE992A3E15B7FF5A00A2A297 /* Icon@2x.png */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		CE992A2815B7FF5A00A2A297 /* Shaders */ = {
-			isa = PBXGroup;
-			children = (
-				CE992A2915B7FF5A00A2A297 /* capture.fsh */,
-				CE992A2B15B7FF5A00A2A297 /* capture.vsh */,
-				CE992A2D15B7FF5A00A2A297 /* generic.fsh */,
-				CE992A2F15B7FF5A00A2A297 /* generic.vsh */,
-				CE992A3115B7FF5A00A2A297 /* particle.fsh */,
-				CE992A3315B7FF5A00A2A297 /* particle.vsh */,
-				CE992A3515B7FF5A00A2A297 /* shadowMap.fsh */,
-				CE992A3715B7FF5A00A2A297 /* shadowMap.vsh */,
-			);
-			name = Shaders;
 			sourceTree = "<group>";
 		};
 		CE992A4415B7FF5A00A2A297 /* libs */ = {
@@ -1890,6 +1833,7 @@
 		CE992C5615B803AF00A2A297 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CECD806015C925E30059385D /* Define */,
 				CE992C5715B803B000A2A297 /* CommonLibrary */,
 				CE992C8215B8040F00A2A297 /* MyGame */,
 				CE992C5815B803B000A2A297 /* Data */,
@@ -2074,14 +2018,6 @@
 		CE992C6D15B803BC00A2A297 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				CE992C6E15B803BC00A2A297 /* capture.fsh */,
-				CE992C6F15B803BC00A2A297 /* capture.vsh */,
-				CE992C7015B803BC00A2A297 /* generic.fsh */,
-				CE992C7115B803BC00A2A297 /* generic.vsh */,
-				CE992C7215B803BC00A2A297 /* particle.fsh */,
-				CE992C7315B803BC00A2A297 /* particle.vsh */,
-				CE992C7415B803BC00A2A297 /* shadowMap.fsh */,
-				CE992C7515B803BC00A2A297 /* shadowMap.vsh */,
 			);
 			name = Shaders;
 			path = Resources/Shaders;
@@ -2152,7 +2088,6 @@
 				CE992E5115B813B700A2A297 /* Crate.png */,
 				CE992E5215B813B700A2A297 /* Crate.pvr */,
 				CE992E5315B813B700A2A297 /* debian.plist */,
-				CE992E5415B813B700A2A297 /* Default.png */,
 				CE992E5515B813B700A2A297 /* DieCube.pod */,
 				CE992E5615B813B700A2A297 /* Earth_1024.jpg */,
 				CE992E5715B813B700A2A297 /* fire.png */,
@@ -2169,16 +2104,12 @@
 				CE992E6215B813B700A2A297 /* Icon-Small-50.png */,
 				CE992E6315B813B700A2A297 /* Icon-Small.png */,
 				CE992E6415B813B700A2A297 /* Icon-Small@2x.png */,
-				CE992E6515B813B700A2A297 /* Icon.png */,
-				CE992E6615B813B700A2A297 /* Icon@2x.png */,
-				CE992E6715B813B700A2A297 /* Info.plist */,
 				CE992E6815B813B700A2A297 /* IntroducingPOD_float.pod */,
 				CE992E6915B813B700A2A297 /* ItunesArtwork */,
 				CE992E6A15B813B700A2A297 /* JoystickThumb.png */,
 				CE992E6B15B813B700A2A297 /* legs.png */,
 				CE992E6C15B813B700A2A297 /* mallet.png */,
 				CE992E6D15B813B700A2A297 /* mallet.pod */,
-				CE992E6E15B813B700A2A297 /* man.pod */,
 				CE992E6F15B813B700A2A297 /* MountainGrass.jpg */,
 				CE992E7015B813B700A2A297 /* ShadowButton48x48.png */,
 				CE992E7115B813B700A2A297 /* ShadowButtonLatched48x48.png */,
@@ -2271,6 +2202,14 @@
 			);
 			name = pods;
 			path = Resources/pods;
+			sourceTree = "<group>";
+		};
+		CECD806015C925E30059385D /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				CECD806115C925F80059385D /* Const.h */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 		FAA64A6715BEFFB300C6A97A /* bullet */ = {
@@ -2730,14 +2669,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE992A2A15B7FF5A00A2A297 /* capture.fsh in Resources */,
-				CE992A2C15B7FF5A00A2A297 /* capture.vsh in Resources */,
-				CE992A2E15B7FF5A00A2A297 /* generic.fsh in Resources */,
-				CE992A3015B7FF5A00A2A297 /* generic.vsh in Resources */,
-				CE992A3215B7FF5A00A2A297 /* particle.fsh in Resources */,
-				CE992A3415B7FF5A00A2A297 /* particle.vsh in Resources */,
-				CE992A3615B7FF5A00A2A297 /* shadowMap.fsh in Resources */,
-				CE992A3815B7FF5A00A2A297 /* shadowMap.vsh in Resources */,
 				CE992A3B15B7FF5A00A2A297 /* Default.png in Resources */,
 				CE992A3D15B7FF5A00A2A297 /* Icon.png in Resources */,
 				CE992A3F15B7FF5A00A2A297 /* Icon@2x.png in Resources */,
@@ -2758,7 +2689,6 @@
 				CE992EB815B813B800A2A297 /* Crate.png in Resources */,
 				CE992EB915B813B800A2A297 /* Crate.pvr in Resources */,
 				CE992EBA15B813B800A2A297 /* debian.plist in Resources */,
-				CE992EBB15B813B800A2A297 /* Default.png in Resources */,
 				CE992EBC15B813B800A2A297 /* DieCube.pod in Resources */,
 				CE992EBD15B813B800A2A297 /* Earth_1024.jpg in Resources */,
 				CE992EBE15B813B800A2A297 /* fire.png in Resources */,
@@ -2775,16 +2705,12 @@
 				CE992EC915B813B800A2A297 /* Icon-Small-50.png in Resources */,
 				CE992ECA15B813B800A2A297 /* Icon-Small.png in Resources */,
 				CE992ECB15B813B800A2A297 /* Icon-Small@2x.png in Resources */,
-				CE992ECC15B813B800A2A297 /* Icon.png in Resources */,
-				CE992ECD15B813B800A2A297 /* Icon@2x.png in Resources */,
-				CE992ECE15B813B800A2A297 /* Info.plist in Resources */,
 				CE992ECF15B813B800A2A297 /* IntroducingPOD_float.pod in Resources */,
 				CE992ED015B813B800A2A297 /* ItunesArtwork in Resources */,
 				CE992ED115B813B800A2A297 /* JoystickThumb.png in Resources */,
 				CE992ED215B813B800A2A297 /* legs.png in Resources */,
 				CE992ED315B813B800A2A297 /* mallet.png in Resources */,
 				CE992ED415B813B800A2A297 /* mallet.pod in Resources */,
-				CE992ED515B813B800A2A297 /* man.pod in Resources */,
 				CE992ED615B813B800A2A297 /* MountainGrass.jpg in Resources */,
 				CE992ED715B813B800A2A297 /* ShadowButton48x48.png in Resources */,
 				CE992ED815B813B800A2A297 /* ShadowButtonLatched48x48.png in Resources */,
@@ -3025,14 +2951,6 @@
 				CE992C3F15B7FF5F00A2A297 /* PVRTVector.cpp in Sources */,
 				CE992C4215B7FF5F00A2A297 /* PVRTVertex.cpp in Sources */,
 				CE992C4715B7FF5F00A2A297 /* main.m in Sources */,
-				CE992C7A15B803BC00A2A297 /* capture.fsh in Sources */,
-				CE992C7B15B803BC00A2A297 /* capture.vsh in Sources */,
-				CE992C7C15B803BC00A2A297 /* generic.fsh in Sources */,
-				CE992C7D15B803BC00A2A297 /* generic.vsh in Sources */,
-				CE992C7E15B803BC00A2A297 /* particle.fsh in Sources */,
-				CE992C7F15B803BC00A2A297 /* particle.vsh in Sources */,
-				CE992C8015B803BC00A2A297 /* shadowMap.fsh in Sources */,
-				CE992C8115B803BC00A2A297 /* shadowMap.vsh in Sources */,
 				CE992C8915B8049000A2A297 /* HelloWorldView.m in Sources */,
 				CE992C8A15B8049000A2A297 /* Isgl3dViewController.m in Sources */,
 				CE992C8B15B8049000A2A297 /* TheBallRunnerAppDelegate.mm in Sources */,
@@ -3242,7 +3160,7 @@
 				CE992C5215B7FF5F00A2A297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CE992C5315B7FF5F00A2A297 /* Build configuration list for PBXNativeTarget "TheBallRunner" */ = {
 			isa = XCConfigurationList;
@@ -3251,7 +3169,7 @@
 				CE992C5515B7FF5F00A2A297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
