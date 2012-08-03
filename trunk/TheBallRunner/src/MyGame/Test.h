@@ -83,9 +83,9 @@ class btCollisionShape;
     //touch location
     CGPoint _touchLocation;
     
-    BOOL isMoving;
-    BOOL isJumping;
-    BOOL isStart;
+    BOOL _isMoving;
+    BOOL _isJumping;
+    BOOL _isStart;
     
     int _numObstacle;
 }

@@ -59,7 +59,8 @@
         
         
         //set start game
-        isStart=NO;
+        _isStart=NO;
+        _isMoving =NO;
         _numObstacle=0;
 		
         
@@ -216,11 +217,11 @@
     CGPoint uiPoint = [touch locationInView:touch.view];
     _touchLocation = [self convertUIPointToView:uiPoint];
     
-    if(!isMoving)
+    if(!_isMoving)
     {
         //player.rigidBody->applyCentralImpulse(btVector3(dir.x-pos.x,dir.y-pos.y,dir.z-pos.z)/2);
         player.rigidBody->setLinearVelocity(btVector3(0,0,30));
-        isMoving=YES;
+        _isMoving=YES;
     }
     
     if(player.node.position.y < 2 )
@@ -229,9 +230,8 @@
         player.rigidBody->setLinearVelocity(btVector3(0,10,30));
         
     } 
-
     //set start game
-    isStart=YES;
+    _isStart=YES;
     
 }
 
@@ -245,7 +245,6 @@
 /******************** game update **********************************/
 - (void) tick:(float)dt 
 {
-    
     
     //COLLISION TEST
     [_physicsWorld collisionTest];
@@ -477,12 +476,11 @@
 	}
     
 	Isgl3dMotionState * motionState = new Isgl3dMotionState(node);
-	
 	btVector3 localInertia(0, 0, 0);
 	shape->calculateLocalInertia(mass, localInertia);
 	btRigidBody * rigidBody = new btRigidBody(mass, motionState, shape, localInertia);
 	rigidBody->setRestitution(restitution);
-    rigidBody->setCompanionId(888);
+    rigidBody->setTag(OBSTACLE_TAG);
 	Isgl3dPhysicsObject3D * physicsObject = [[Isgl3dPhysicsObject3D alloc] initWithNode:node andRigidBody:rigidBody];
 	[_physicsWorld addPhysicsObject:physicsObject];
     
@@ -507,7 +505,7 @@
     
 	rigidBody->setRestitution(restitution);
     
-    rigidBody->setCompanionId(999);
+    rigidBody->setTag(PLAYER_TAG);
     
 	Isgl3dPhysicsObject3D * physicsObject = [[Isgl3dPhysicsObject3D alloc] initWithNode:node andRigidBody:rigidBody];
 	
