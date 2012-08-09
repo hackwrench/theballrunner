@@ -96,7 +96,6 @@
         
         
 		// Create textures - matearial
-		_beachBallMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"BeachBall.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
 		_isglLogo = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"crate.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
         _standardMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"cardboard.png" shininess:0.9];
     
@@ -119,7 +118,8 @@
         [self createPlaneWith:PLANE_WIDTH _height:PLANE_HEIGH];
         
         // create player
-        [self createPlayerWithPos:iv3(0,5,-450 ) andRadius:1];
+        _ballstartPos = iv3(0,5,-450 );
+        [self createPlayerWithPos:_ballstartPos andRadius:1];
         
         //create animation
         [self createPodAnimation];
@@ -129,7 +129,7 @@
         
         
         //light setting
-		_light  = [[Isgl3dShadowCastingLight alloc] initWithHexColor:@"111111" diffuseColor:@"FFFFFF" specularColor:@"FFFFFF" attenuation:0.003];
+		_light  = [[Isgl3dShadowCastingLight alloc] initWithHexColor:@"111111" diffuseColor:@"FFFFFF" specularColor:@"FFFFFF" attenuation:0.03];
 		[self.scene addChild:_light];
 		_light.position = iv3(10, 100, 10);
         
@@ -137,10 +137,6 @@
         
         
 		[self setSceneAmbient:@"666666"];
-        
-        
-        [self.camera setPosition:iv3(0,_ballNode.position.y+2,_ballNode.position.z-7)];
-        [self.camera setLookAt:_ballNode.position];
         
         
 		// Schedule updates
@@ -293,9 +289,15 @@
 	
 	[objectsToDelete release];
     
-	
-	// update camera
-	//[_cameraController update];
+    //check if the ball fall in out of range ---> reset position
+    if(_ballNode.position.y < -30)
+    { 
+        NSLog(@"Ball pos(%f,%f,%f)", _ballNode.position.x,_ballNode.position.y,_ballNode.position.z);
+        //_ballNode.position = _ballstartPos;
+        [_physicsWorld removePhysicsObject:player];
+        [self createPlayerWithPos:_ballstartPos andRadius:1];
+       
+    }
 }
 
 //================== create plane and wall ====================//
@@ -304,6 +306,7 @@
     
     //create material
     Isgl3dTextureMaterial * woodMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"wood.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:YES repeatY:YES];
+     Isgl3dTextureMaterial * grassMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"MountainGrass.jpg" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:YES repeatY:YES];
     
     Isgl3dTextureMaterial * woodMaterial1 = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"wall.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:YES repeatY:YES];
     
@@ -312,7 +315,7 @@
     // Create the ground surface
     Isgl3dPlane * plane = [[Isgl3dPlane alloc] initWithGeometry:_height height:_width nx:_height ny:_width];
     btCollisionShape* groundShape = new btBox2dShape(btVector3(_height/2, _width/2, 0));
-    Isgl3dMeshNode * node = [_physicsWorld createNodeWithMesh:plane andMaterial:[woodMaterial autorelease]];
+    Isgl3dMeshNode * node = [_physicsWorld createNodeWithMesh:plane andMaterial:[grassMaterial autorelease]];
     [node setRotation:-90 x:1 y:0 z:0];
     node.position = iv3(-0, 0, 0);
     _plane = [self createPhysicsObject:node shape:groundShape mass:0 restitution:0.6 isFalling:NO];
@@ -356,17 +359,34 @@
     
     
     // Modify texture files
+    //get pod file to project
     [podImporter modifyTexture:@"body.bmp" withTexture:@"Body.pvr"];
     [podImporter modifyTexture:@"legs.bmp" withTexture:@"Legs.pvr"];
     [podImporter modifyTexture:@"belt.bmp" withTexture:@"Belt.pvr"];
+   
+    
+    //create nod --> add meshnode from podimpoter
+    /*Isgl3dNode *man = [self.scene createNode];
+    [podImporter addMeshesToScene:man];
+    [man setPosition:iv3(0,0,-350)];
+    [man setScale:0.05];
+    //[man setRotationY:90];*/
+    
+    
+    //create collision shape with convexshape
+    //btConvexShape* _shape = new bt
+    
 	
     // Create skeleton node	
     Isgl3dSkeletonNode * skeleton = [self.scene createSkeletonNode];
     skeleton.position = iv3(0, 0 , -450);
     [skeleton setScale:0.05];
     //run action
-    id action1 = [Isgl3dActionMoveTo actionWithDuration:50 position:iv3(0,0,1000)];
-    [skeleton runAction:action1];
+    id action0 = [Isgl3dActionMoveTo actionWithDuration:60 position:iv3(0,0,500)];
+    id action1 = [Isgl3dActionRotateYBy actionWithDuration:1 angle:180];
+    id action2 = [Isgl3dActionMoveTo actionWithDuration:60 position:iv3(0,0,-400)];
+    id sequence= [Isgl3dActionSequence actionWithActionsArray:[NSArray arrayWithObjects:action0,action1,action2, nil]];
+    [skeleton runAction:sequence];
     
     // Add meshes to skeleton
     [podImporter addMeshesToScene:skeleton];
@@ -378,15 +398,15 @@
     _animationController = [[Isgl3dAnimationController alloc] initWithSkeleton:skeleton andNumberOfFrames:[podImporter numberOfFrames]];
     [_animationController start];
 	
-    
-    
+
 }
 
 //================ create player ===========================//
 - (void) createPlayerWithPos:(Isgl3dVector3)pos andRadius:(float)radius
 {
     
-    
+    //create material
+    _beachBallMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"Earth_1024.jpg" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
     //create mesh first
     _sphereMesh = [[Isgl3dSphere alloc] initWithGeometry:radius longs:16 lats:16];
     
@@ -415,6 +435,10 @@
     player.node.interactive = YES;
     [player.node addEvent3DListener:self method:@selector(playerTouch:) forEventType:TOUCH_EVENT];
     [player.node addEvent3DListener:self method:@selector(playerTouchRelease:) forEventType:RELEASE_EVENT];
+    
+    //setup camera to follow the ball
+    [self.camera setPosition:iv3(0,_ballNode.position.y+2,_ballNode.position.z-7)];
+    [self.camera setLookAt:_ballNode.position];
     
     
 }
@@ -447,18 +471,18 @@
 - (void) createObstacle
 {
     
-    Isgl3dTextureMaterial * _material = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"cardboard.jpg" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:YES repeatY:YES];
+    Isgl3dTextureMaterial * _material = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"Bricks-Red.jpg" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:YES repeatY:YES];
     
-    _standardMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"cardboard.png" shininess:0.9];
+    _standardMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"Bricks-Red.jpg" shininess:0.9];
     
     Isgl3dCube* _obstacleMesh = [[Isgl3dCube alloc] initWithGeometry:5 height:5 depth:2 nx:5 ny:5];
     
-    for(int i=0;i<20 ;i ++)
+    for(int i=0;i<50 ;i ++)
     {
         btCollisionShape* _obstacleShape = new btBox2dShape(btVector3(2.5, 2.5, 1));
         Isgl3dMeshNode * wallNode = [_physicsWorld createNodeWithMesh:_obstacleMesh andMaterial:[_material autorelease]];
         //[wallNode setRotation:0 x:1 y:0 z:0];
-        wallNode.position = iv3(0, 0, -(PLANE_WIDTH/2 -100) + i*100);
+        wallNode.position = iv3(0, 0, -(PLANE_WIDTH/2 -100) + i*50);
         [self createPhysicsObject:wallNode shape:_obstacleShape mass:0 restitution:0.6 isFalling:NO];
         
     }
@@ -497,24 +521,21 @@
     
 	Isgl3dMotionState * motionState = new Isgl3dMotionState(node);
     
-	btVector3 localInertia(0, 0, 0);
+	btVector3 localInertia(1, 1, 1);
     
 	shape->calculateLocalInertia(mass, localInertia);
     
-	btRigidBody * rigidBody = new btRigidBody(mass, motionState, shape, localInertia);
+	 _playerBody = new btRigidBody(mass, motionState, shape, localInertia);
     
-	rigidBody->setRestitution(restitution);
+	_playerBody->setRestitution(restitution);
     
-    rigidBody->setTag(PLAYER_TAG);
+    _playerBody->setTag(PLAYER_TAG);
     
-	Isgl3dPhysicsObject3D * physicsObject = [[Isgl3dPhysicsObject3D alloc] initWithNode:node andRigidBody:rigidBody];
+	Isgl3dPhysicsObject3D * physicsObject = [[Isgl3dPhysicsObject3D alloc] initWithNode:node andRigidBody:_playerBody];
 	
     [_physicsWorld addPhysicsObject:physicsObject];
     
-    
-	//[_physicsObjects addObject:physicsObject];
-	
-	return [physicsObject autorelease];
+   	return [physicsObject autorelease];
     
 }
 

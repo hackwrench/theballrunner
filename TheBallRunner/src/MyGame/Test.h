@@ -74,6 +74,7 @@ class btCollisionShape;
     btCollisionShape * _ballShape;
     Isgl3dPhysicsObject3D* player;
     Isgl3dPhysicsObject3D * _plane;
+    btRigidBody*    _playerBody;
     
     //animationcontrol
     Isgl3dAnimationController * _animationController;
@@ -82,6 +83,7 @@ class btCollisionShape;
     
     //touch location
     CGPoint _touchLocation;
+    Isgl3dVector3 _ballstartPos;
     
     BOOL _isMoving;
     BOOL _isJumping;
