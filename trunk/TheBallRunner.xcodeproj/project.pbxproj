@@ -287,6 +287,10 @@
 		CE992F0E15B813B800A2A297 /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = CE992EA815B813B700A2A297 /* wood.png */; };
 		CE992F0F15B813B800A2A297 /* man.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE992EAA15B813B800A2A297 /* man.pod */; };
 		CE992F1015B813B800A2A297 /* Scene_float.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE992EAB15B813B800A2A297 /* Scene_float.pod */; };
+		CEE0D22D15D0E1AA00ABBA1E /* AbstractDynamicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE0D22C15D0E1AA00ABBA1E /* AbstractDynamicObject.m */; };
+		CEE0D23115D0E1D000ABBA1E /* GameProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE0D23015D0E1D000ABBA1E /* GameProxy.m */; };
+		CEE0D23415D0E1E300ABBA1E /* MainGame.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE0D23315D0E1E300ABBA1E /* MainGame.m */; };
+		CEE0D23715D0E21400ABBA1E /* AbstractStaticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE0D23615D0E21400ABBA1E /* AbstractStaticObject.m */; };
 		FAA64B9415BEFFB300C6A97A /* btAxisSweep3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA64A6D15BEFFB300C6A97A /* btAxisSweep3.cpp */; };
 		FAA64B9515BEFFB300C6A97A /* btBroadphaseProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA64A7015BEFFB300C6A97A /* btBroadphaseProxy.cpp */; };
 		FAA64B9615BEFFB300C6A97A /* btCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA64A7215BEFFB300C6A97A /* btCollisionAlgorithm.cpp */; };
@@ -868,6 +872,14 @@
 		CE992EAA15B813B800A2A297 /* man.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = man.pod; sourceTree = "<group>"; };
 		CE992EAB15B813B800A2A297 /* Scene_float.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = Scene_float.pod; sourceTree = "<group>"; };
 		CECD806115C925F80059385D /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		CEE0D22B15D0E1AA00ABBA1E /* AbstractDynamicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractDynamicObject.h; sourceTree = "<group>"; };
+		CEE0D22C15D0E1AA00ABBA1E /* AbstractDynamicObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractDynamicObject.m; sourceTree = "<group>"; };
+		CEE0D22F15D0E1D000ABBA1E /* GameProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameProxy.h; sourceTree = "<group>"; };
+		CEE0D23015D0E1D000ABBA1E /* GameProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameProxy.m; sourceTree = "<group>"; };
+		CEE0D23215D0E1E300ABBA1E /* MainGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainGame.h; sourceTree = "<group>"; };
+		CEE0D23315D0E1E300ABBA1E /* MainGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainGame.m; sourceTree = "<group>"; };
+		CEE0D23515D0E21400ABBA1E /* AbstractStaticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractStaticObject.h; sourceTree = "<group>"; };
+		CEE0D23615D0E21400ABBA1E /* AbstractStaticObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractStaticObject.m; sourceTree = "<group>"; };
 		FAA64A6815BEFFB300C6A97A /* btBulletCollisionCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btBulletCollisionCommon.h; sourceTree = "<group>"; };
 		FAA64A6915BEFFB300C6A97A /* btBulletDynamicsCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btBulletDynamicsCommon.h; sourceTree = "<group>"; };
 		FAA64A6A15BEFFB300C6A97A /* Bullet-C-Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bullet-C-Api.h"; sourceTree = "<group>"; };
@@ -1889,6 +1901,8 @@
 		CE992C5C15B803B000A2A297 /* DynamicObject */ = {
 			isa = PBXGroup;
 			children = (
+				CEE0D22B15D0E1AA00ABBA1E /* AbstractDynamicObject.h */,
+				CEE0D22C15D0E1AA00ABBA1E /* AbstractDynamicObject.m */,
 			);
 			path = DynamicObject;
 			sourceTree = "<group>";
@@ -1903,6 +1917,8 @@
 		CE992C5E15B803B000A2A297 /* StaticObject */ = {
 			isa = PBXGroup;
 			children = (
+				CEE0D23515D0E21400ABBA1E /* AbstractStaticObject.h */,
+				CEE0D23615D0E21400ABBA1E /* AbstractStaticObject.m */,
 			);
 			path = StaticObject;
 			sourceTree = "<group>";
@@ -2066,6 +2082,10 @@
 				CE992C8615B8049000A2A297 /* Isgl3dViewController.m */,
 				CE992C8715B8049000A2A297 /* TheBallRunnerAppDelegate.h */,
 				CE992C8815B8049000A2A297 /* TheBallRunnerAppDelegate.mm */,
+				CEE0D22F15D0E1D000ABBA1E /* GameProxy.h */,
+				CEE0D23015D0E1D000ABBA1E /* GameProxy.m */,
+				CEE0D23215D0E1E300ABBA1E /* MainGame.h */,
+				CEE0D23315D0E1E300ABBA1E /* MainGame.m */,
 			);
 			path = MyGame;
 			sourceTree = "<group>";
@@ -3073,6 +3093,10 @@
 				FAA64C1015BEFFC700C6A97A /* Isgl3dPhysicsObject3D.mm in Sources */,
 				FAA64C1115BEFFC700C6A97A /* Isgl3dPhysicsWorld.mm in Sources */,
 				CE8C796315BFC7AC007230C6 /* Test.mm in Sources */,
+				CEE0D22D15D0E1AA00ABBA1E /* AbstractDynamicObject.m in Sources */,
+				CEE0D23115D0E1D000ABBA1E /* GameProxy.m in Sources */,
+				CEE0D23415D0E1E300ABBA1E /* MainGame.m in Sources */,
+				CEE0D23715D0E21400ABBA1E /* AbstractStaticObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
