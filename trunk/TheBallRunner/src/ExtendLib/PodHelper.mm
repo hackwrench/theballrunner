@@ -16,9 +16,15 @@
 #include "btBulletDynamicsCommon.h"
 #include "btBox2dShape.h"
 
+
+@interface PodHelper()
++ (btVector3*) getMinMax:(Isgl3dMeshNode*)meshNode ;
+
+@end
+
 @implementation PodHelper
 
-+ (Isgl3dMeshNode*)meshNodeFromPdfile:(NSString*)podFileName  getMesh:(NSString*)meshName 
++ (Isgl3dMeshNode*)meshNodeFromPodfile:(NSString*)podFileName  getMesh:(NSString*)meshName 
 {
     Isgl3dPODImporter * importer = [Isgl3dPODImporter 
                                     podImporterWithFile:podFileName]; 
@@ -30,7 +36,7 @@
 
 //Here is the getMinMax method to obtain the points of a mesh node: 
 
-- (btVector3*) getMinMax:(Isgl3dMeshNode*)meshNode 
++ (btVector3*) getMinMax:(Isgl3dMeshNode*)meshNode 
                     minX:(float*)minX 
                     maxX:(float*)maxX 
                     minY:(float*)minY 
@@ -113,8 +119,13 @@
     } 
     return points; 
 } 
-
-- (btCollisionShape*) getCollisionShapeForNode: (Isgl3dMeshNode 
+/****************************************************************************************
+*Name: get collison shape(bullet) from a mesh node--> use for physic with mesh from model
+*Input:  *Isgl3DMeshNode(Belong to Isgl3Dframework)
+*Output: *btCollisionShape(Belong to Bullet physyic lib)
+*
+****************************************************************************************/
++ (btCollisionShape*) getCollisionShapeForNode: (Isgl3dMeshNode 
                                                  *)node 
 { 
     int numVertices = node.mesh.numberOfVertices; 

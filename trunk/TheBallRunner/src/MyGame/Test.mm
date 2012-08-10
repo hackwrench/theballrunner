@@ -11,7 +11,7 @@
 #import "Isgl3dPhysicsObject3D.h"
 #import "Isgl3dMotionState.h"
 #include "Isgl3dPODImporter.h"
-
+#import "PodHelper.h"
 #import <stdlib.h>
 #import <time.h>
 
@@ -355,9 +355,9 @@
     
     Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:@"man.pod"];
     
-    //Isgl3dPODImporter * importer = [Isgl3dPODImporter podImporterWithFile:@"Scene_float.pod"];
+    Isgl3dPODImporter * importer = [Isgl3dPODImporter podImporterWithFile:@"Scene_float.pod"];
     
-    
+    [importer printPODInfo];
     // Modify texture files
     //get pod file to project
     [podImporter modifyTexture:@"body.bmp" withTexture:@"Body.pvr"];
@@ -366,11 +366,11 @@
    
     
     //create nod --> add meshnode from podimpoter
-    /*Isgl3dNode *man = [self.scene createNode];
+    Isgl3dNode *man = [self.scene createNode];
     [podImporter addMeshesToScene:man];
     [man setPosition:iv3(0,0,-350)];
     [man setScale:0.05];
-    //[man setRotationY:90];*/
+    //[man setRotationY:90];
     
     
     //create collision shape with convexshape
@@ -393,6 +393,7 @@
     [skeleton setAlphaWithChildren:1];
     [podImporter addBonesToSkeleton:skeleton];
     [skeleton enableShadowCastingWithChildren:YES];
+    
 	
     // Add animation controller
     _animationController = [[Isgl3dAnimationController alloc] initWithSkeleton:skeleton andNumberOfFrames:[podImporter numberOfFrames]];
