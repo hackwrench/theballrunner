@@ -1,5 +1,9 @@
 //
 //  PodHelper.h
+//  This class use to help us about pod file and mesh collisionshape from pod file
+//
+//
+//
 //  TheBallRunner
 //
 
@@ -11,8 +15,6 @@
 #include "btBulletDynamicsCommon.h"
 #include "btBox2dShape.h"
 #include <btShapeHull.h>
-
-
 
 
 @class Isgl3dScene;
@@ -29,9 +31,9 @@ class btCollisionShape;
 
 @interface PodHelper : NSObject
 
-+ (Isgl3dMeshNode*)meshNodeFromPdfile:(NSString*)podFileName  getMesh: 
++ (Isgl3dMeshNode*)meshNodeFromPodfile:(NSString*)podFileName  getMesh: 
 (NSString*)meshName ;
-- (btCollisionShape*) getCollisionShapeForNode: (Isgl3dMeshNode *)node; 
-- (btVector3*) getMinMax:(Isgl3dMeshNode*)meshNode ;
++ (btCollisionShape*) getCollisionShapeForNode: (Isgl3dMeshNode *)node; 
+
 
 @end
