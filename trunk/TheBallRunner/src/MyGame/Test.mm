@@ -19,7 +19,7 @@
 #include "btBox2dShape.h"
 
 
-#define PLANE_WIDTH 1000
+#define PLANE_WIDTH 500
 #define PLANE_HEIGH 20
 
 
@@ -118,7 +118,7 @@
         [self createPlaneWith:PLANE_WIDTH _height:PLANE_HEIGH];
         
         // create player
-        _ballstartPos = iv3(0,5,-450 );
+        _ballstartPos = iv3(0,5,-PLANE_WIDTH/2 + 80 );
         [self createPlayerWithPos:_ballstartPos andRadius:1];
         
         //create animation
@@ -134,8 +134,7 @@
 		_light.position = iv3(10, 100, 10);
         
 		_light.planarShadowsNode = _plane.node;
-        
-        
+            
 		[self setSceneAmbient:@"666666"];
         
         
@@ -352,11 +351,16 @@
 //================== create pod animation ===================//
 - (void)createPodAnimation
 {
+    Isgl3dPODImporter * importer = [Isgl3dPODImporter podImporterWithFile:@"Scene_float.pod"];
+    [importer printPODInfo];
+    [importer addMeshesToScene:self.scene];
+    Isgl3dMeshNode* _teapotMeshNode = [importer meshNodeWithName:@"Teapot01"];
+    btCollisionShape* _teapotShape = [PodHelper getCollisionShapeForNode:_teapotMeshNode];
+    //create physic object
+    [self createPhysicsObject:_teapotMeshNode shape:_teapotShape mass:5 restitution:0.4 isFalling:YES];
+    [_teapotMeshNode setPosition:iv3(0,40,-PLANE_WIDTH/2 + 120)];
     
     Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:@"man.pod"];
-    
-    Isgl3dPODImporter * importer = [Isgl3dPODImporter podImporterWithFile:@"Scene_float.pod"];
-    
     [importer printPODInfo];
     // Modify texture files
     //get pod file to project
@@ -366,7 +370,7 @@
    
     
     //create nod --> add meshnode from podimpoter
-    Isgl3dNode *man = [self.scene createNode];
+    /*Isgl3dNode *man = [self.scene createNode];
     [podImporter addMeshesToScene:man];
     [man setPosition:iv3(0,0,-350)];
     [man setScale:0.05];
@@ -397,7 +401,7 @@
 	
     // Add animation controller
     _animationController = [[Isgl3dAnimationController alloc] initWithSkeleton:skeleton andNumberOfFrames:[podImporter numberOfFrames]];
-    [_animationController start];
+    [_animationController start];*/
 	
 
 }
@@ -483,7 +487,7 @@
         btCollisionShape* _obstacleShape = new btBox2dShape(btVector3(2.5, 2.5, 1));
         Isgl3dMeshNode * wallNode = [_physicsWorld createNodeWithMesh:_obstacleMesh andMaterial:[_material autorelease]];
         //[wallNode setRotation:0 x:1 y:0 z:0];
-        wallNode.position = iv3(0, 0, -(PLANE_WIDTH/2 -100) + i*50);
+        wallNode.position = iv3(0, 0, -(PLANE_WIDTH/2 -100) + i*25);
         [self createPhysicsObject:wallNode shape:_obstacleShape mass:0 restitution:0.6 isFalling:NO];
         
     }
@@ -522,7 +526,7 @@
     
 	Isgl3dMotionState * motionState = new Isgl3dMotionState(node);
     
-	btVector3 localInertia(1, 1, 1);
+	btVector3 localInertia(0, 0, 0);
     
 	shape->calculateLocalInertia(mass, localInertia);
     
