@@ -23,6 +23,11 @@
 		CE8C797E15BFC8D3007230C6 /* player_side_3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C797015BFC8CD007230C6 /* player_side_3.png */; };
 		CE8C797F15BFC8D3007230C6 /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C797115BFC8D0007230C6 /* wall.png */; };
 		CE966EDB15D38C82005047DD /* PodHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE966EDA15D38C82005047DD /* PodHelper.mm */; };
+		CE9826B015E34D3E0022891D /* TerrainForest.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE9826AF15E34D3E0022891D /* TerrainForest.pod */; };
+		CE9826B515E35B320022891D /* AshTex.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9826B415E35B320022891D /* AshTex.png */; };
+		CE9826B715E35C550022891D /* AshTree.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE9826B615E35C550022891D /* AshTree.pod */; };
+		CE9826B915E35DD10022891D /* 3D Cartoon Character Mickey.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE9826B815E35DD10022891D /* 3D Cartoon Character Mickey.pod */; };
+		CE9826E215E373A80022891D /* model.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE9826E115E373A80022891D /* model.pod */; };
 		CE992A1D15B7FF5A00A2A297 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE992A1C15B7FF5A00A2A297 /* QuartzCore.framework */; };
 		CE992A1F15B7FF5A00A2A297 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE992A1E15B7FF5A00A2A297 /* OpenGLES.framework */; };
 		CE992A2115B7FF5A00A2A297 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE992A2015B7FF5A00A2A297 /* CoreGraphics.framework */; };
@@ -432,6 +437,11 @@
 		CE8C797115BFC8D0007230C6 /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
 		CE966ED915D38C82005047DD /* PodHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodHelper.h; sourceTree = "<group>"; };
 		CE966EDA15D38C82005047DD /* PodHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PodHelper.mm; sourceTree = "<group>"; };
+		CE9826AF15E34D3E0022891D /* TerrainForest.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = TerrainForest.pod; sourceTree = "<group>"; };
+		CE9826B415E35B320022891D /* AshTex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AshTex.png; sourceTree = "<group>"; };
+		CE9826B615E35C550022891D /* AshTree.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = AshTree.pod; sourceTree = "<group>"; };
+		CE9826B815E35DD10022891D /* 3D Cartoon Character Mickey.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3D Cartoon Character Mickey.pod"; sourceTree = "<group>"; };
+		CE9826E115E373A80022891D /* model.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pod; sourceTree = "<group>"; };
 		CE992A1815B7FF5A00A2A297 /* TheBallRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBallRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE992A1C15B7FF5A00A2A297 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CE992A1E15B7FF5A00A2A297 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2222,6 +2232,11 @@
 		CE992EA915B813B700A2A297 /* pods */ = {
 			isa = PBXGroup;
 			children = (
+				CE9826E115E373A80022891D /* model.pod */,
+				CE9826B815E35DD10022891D /* 3D Cartoon Character Mickey.pod */,
+				CE9826B615E35C550022891D /* AshTree.pod */,
+				CE9826B415E35B320022891D /* AshTex.png */,
+				CE9826AF15E34D3E0022891D /* TerrainForest.pod */,
 				CE992EAA15B813B800A2A297 /* man.pod */,
 				CE992EAB15B813B800A2A297 /* Scene_float.pod */,
 			);
@@ -2810,6 +2825,11 @@
 				CE8C797D15BFC8D3007230C6 /* player_side_2.png in Resources */,
 				CE8C797E15BFC8D3007230C6 /* player_side_3.png in Resources */,
 				CE8C797F15BFC8D3007230C6 /* wall.png in Resources */,
+				CE9826B015E34D3E0022891D /* TerrainForest.pod in Resources */,
+				CE9826B515E35B320022891D /* AshTex.png in Resources */,
+				CE9826B715E35C550022891D /* AshTree.pod in Resources */,
+				CE9826B915E35DD10022891D /* 3D Cartoon Character Mickey.pod in Resources */,
+				CE9826E215E373A80022891D /* model.pod in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
