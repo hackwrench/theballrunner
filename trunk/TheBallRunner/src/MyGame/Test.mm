@@ -20,7 +20,7 @@
 
 
 #define PLANE_WIDTH 500
-#define PLANE_HEIGH 20
+#define PLANE_HEIGH 50
 
 
 @interface Test (PrivateMethods)
@@ -125,7 +125,7 @@
         [self createPodAnimation];
         
         //create obstacle
-        [self createObstacle];
+        //[self createObstacle];
         
         
         //light setting
@@ -351,16 +351,27 @@
 //================== create pod animation ===================//
 - (void)createPodAnimation
 {
-    Isgl3dPODImporter * importer = [Isgl3dPODImporter podImporterWithFile:@"Scene_float.pod"];
+    
+    Isgl3dPODImporter *_importer = [Isgl3dPODImporter podImporterWithFile:@"model.pod"];
+    [_importer printPODInfo];
+    Isgl3dNode *_node = [self.scene createNode];
+    [_importer addMeshesToScene:_node];
+    //[_node setPosition:iv3(0,5,0)];
+    //[_node setScale:1000];
+    
+    /*Isgl3dPODImporter * importer = [Isgl3dPODImporter podImporterWithFile:@"Scene_float.pod"];
     [importer printPODInfo];
     [importer addMeshesToScene:self.scene];
-    Isgl3dMeshNode* _teapotMeshNode = [importer meshNodeWithName:@"Teapot01"];
+    Isgl3dMeshNode* _teapotMeshNode = [importer meshNodeWithName:@"teapod01"];
+    [_teapotMeshNode setScale:5];
     btCollisionShape* _teapotShape = [PodHelper getCollisionShapeForNode:_teapotMeshNode];
+    _teapotShape->setLocalScaling(btVector3(5, 5, 5));
     //create physic object
-    [self createPhysicsObject:_teapotMeshNode shape:_teapotShape mass:5 restitution:0.4 isFalling:YES];
-    [_teapotMeshNode setPosition:iv3(0,40,-PLANE_WIDTH/2 + 120)];
+    [self createPhysicsObject:_teapotMeshNode shape:_teapotShape mass:500 restitution:0.4 isFalling:YES];
+    [_teapotMeshNode setPosition:iv3(0,0,-PLANE_WIDTH/2 + 80)];*/
     
-    Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:@"man.pod"];
+        
+    /*Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:@"man.pod"];
     [importer printPODInfo];
     // Modify texture files
     //get pod file to project
@@ -370,7 +381,7 @@
    
     
     //create nod --> add meshnode from podimpoter
-    /*Isgl3dNode *man = [self.scene createNode];
+    Isgl3dNode *man = [self.scene createNode];
     [podImporter addMeshesToScene:man];
     [man setPosition:iv3(0,0,-350)];
     [man setScale:0.05];
@@ -397,6 +408,7 @@
     [skeleton setAlphaWithChildren:1];
     [podImporter addBonesToSkeleton:skeleton];
     [skeleton enableShadowCastingWithChildren:YES];
+
     
 	
     // Add animation controller
@@ -482,7 +494,7 @@
     
     Isgl3dCube* _obstacleMesh = [[Isgl3dCube alloc] initWithGeometry:5 height:5 depth:2 nx:5 ny:5];
     
-    for(int i=0;i<50 ;i ++)
+    for(int i=0;i<15 ;i ++)
     {
         btCollisionShape* _obstacleShape = new btBox2dShape(btVector3(2.5, 2.5, 1));
         Isgl3dMeshNode * wallNode = [_physicsWorld createNodeWithMesh:_obstacleMesh andMaterial:[_material autorelease]];
