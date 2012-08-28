@@ -23,10 +23,6 @@
 		CE8C797E15BFC8D3007230C6 /* player_side_3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C797015BFC8CD007230C6 /* player_side_3.png */; };
 		CE8C797F15BFC8D3007230C6 /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C797115BFC8D0007230C6 /* wall.png */; };
 		CE966EDB15D38C82005047DD /* PodHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE966EDA15D38C82005047DD /* PodHelper.mm */; };
-		CE9826B015E34D3E0022891D /* TerrainForest.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE9826AF15E34D3E0022891D /* TerrainForest.pod */; };
-		CE9826B515E35B320022891D /* AshTex.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9826B415E35B320022891D /* AshTex.png */; };
-		CE9826B715E35C550022891D /* AshTree.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE9826B615E35C550022891D /* AshTree.pod */; };
-		CE9826B915E35DD10022891D /* 3D Cartoon Character Mickey.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE9826B815E35DD10022891D /* 3D Cartoon Character Mickey.pod */; };
 		CE9826E215E373A80022891D /* model.pod in Resources */ = {isa = PBXBuildFile; fileRef = CE9826E115E373A80022891D /* model.pod */; };
 		CE992A1D15B7FF5A00A2A297 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE992A1C15B7FF5A00A2A297 /* QuartzCore.framework */; };
 		CE992A1F15B7FF5A00A2A297 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE992A1E15B7FF5A00A2A297 /* OpenGLES.framework */; };
@@ -297,6 +293,58 @@
 		CEE0D23115D0E1D000ABBA1E /* GameProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE0D23015D0E1D000ABBA1E /* GameProxy.m */; };
 		CEE0D23415D0E1E300ABBA1E /* MainGame.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE0D23315D0E1E300ABBA1E /* MainGame.m */; };
 		CEE0D23715D0E21400ABBA1E /* AbstractStaticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE0D23615D0E21400ABBA1E /* AbstractStaticObject.m */; };
+		FA75E21215EA369A002CADD0 /* Stargate.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA75E21115EA369A002CADD0 /* Stargate.pod */; };
+		FA75E21A15EA36A9002CADD0 /* Event_Horizon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA75E21315EA36A8002CADD0 /* Event_Horizon.jpg */; };
+		FA75E21B15EA36A9002CADD0 /* Material1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA75E21415EA36A8002CADD0 /* Material1.jpg */; };
+		FA75E21C15EA36A9002CADD0 /* Material2noCulling.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA75E21515EA36A8002CADD0 /* Material2noCulling.jpg */; };
+		FA75E21D15EA36A9002CADD0 /* stargate2_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA75E21615EA36A8002CADD0 /* stargate2_1.jpg */; };
+		FA75E21E15EA36A9002CADD0 /* stargate2noCulling.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA75E21715EA36A8002CADD0 /* stargate2noCulling.jpg */; };
+		FA75E21F15EA36A9002CADD0 /* stargate2x01_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA75E21815EA36A8002CADD0 /* stargate2x01_1.jpg */; };
+		FA75E22015EA36A9002CADD0 /* stargate2x01noCulling.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA75E21915EA36A9002CADD0 /* stargate2x01noCulling.jpg */; };
+		FA75E22415EA3B27002CADD0 /* CoconutLeafDead.png in Resources */ = {isa = PBXBuildFile; fileRef = FA75E22115EA3B26002CADD0 /* CoconutLeafDead.png */; };
+		FA75E22515EA3B27002CADD0 /* CoconutTex.png in Resources */ = {isa = PBXBuildFile; fileRef = FA75E22215EA3B26002CADD0 /* CoconutTex.png */; };
+		FA75E22615EA3B27002CADD0 /* CoconutTree.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA75E22315EA3B27002CADD0 /* CoconutTree.pod */; };
+		FA771B9215EA2B2600692D78 /* AshTex.png in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9015EA2B2600692D78 /* AshTex.png */; };
+		FA771B9315EA2B2600692D78 /* AshTree.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9115EA2B2600692D78 /* AshTree.pod */; };
+		FA771B9615EA2B4300692D78 /* DeadBark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9415EA2B4300692D78 /* DeadBark.jpg */; };
+		FA771B9715EA2B4300692D78 /* deadtree.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9515EA2B4300692D78 /* deadtree.pod */; };
+		FA771B9915EA2B4300692D78 /* ground.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9815EA2B4300692D78 /* ground.pod */; };
+		FA771BBC15EA2B4300692D78 /* texture0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9B15EA2B4300692D78 /* texture0.jpg */; };
+		FA771BBD15EA2B4300692D78 /* texture1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9C15EA2B4300692D78 /* texture1.jpg */; };
+		FA771BBE15EA2B4300692D78 /* texture10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9D15EA2B4300692D78 /* texture10.jpg */; };
+		FA771BBF15EA2B4300692D78 /* texture11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9E15EA2B4300692D78 /* texture11.jpg */; };
+		FA771BC015EA2B4300692D78 /* texture12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9F15EA2B4300692D78 /* texture12.jpg */; };
+		FA771BC115EA2B4300692D78 /* texture13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BA015EA2B4300692D78 /* texture13.jpg */; };
+		FA771BC215EA2B4300692D78 /* texture14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BA115EA2B4300692D78 /* texture14.jpg */; };
+		FA771BC315EA2B4300692D78 /* texture15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BA215EA2B4300692D78 /* texture15.jpg */; };
+		FA771BC415EA2B4300692D78 /* texture16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BA315EA2B4300692D78 /* texture16.jpg */; };
+		FA771BC515EA2B4300692D78 /* texture17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BA415EA2B4300692D78 /* texture17.jpg */; };
+		FA771BC615EA2B4300692D78 /* texture18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BA515EA2B4300692D78 /* texture18.jpg */; };
+		FA771BC715EA2B4300692D78 /* texture19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BA615EA2B4300692D78 /* texture19.jpg */; };
+		FA771BC815EA2B4300692D78 /* texture2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BA715EA2B4300692D78 /* texture2.jpg */; };
+		FA771BC915EA2B4300692D78 /* texture20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BA815EA2B4300692D78 /* texture20.jpg */; };
+		FA771BCA15EA2B4300692D78 /* texture21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BA915EA2B4300692D78 /* texture21.jpg */; };
+		FA771BCB15EA2B4300692D78 /* texture22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BAA15EA2B4300692D78 /* texture22.jpg */; };
+		FA771BCC15EA2B4300692D78 /* texture23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BAB15EA2B4300692D78 /* texture23.jpg */; };
+		FA771BCD15EA2B4300692D78 /* texture24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BAC15EA2B4300692D78 /* texture24.jpg */; };
+		FA771BCE15EA2B4300692D78 /* texture25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BAD15EA2B4300692D78 /* texture25.jpg */; };
+		FA771BCF15EA2B4300692D78 /* texture26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BAE15EA2B4300692D78 /* texture26.jpg */; };
+		FA771BD015EA2B4300692D78 /* texture27.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BAF15EA2B4300692D78 /* texture27.jpg */; };
+		FA771BD115EA2B4300692D78 /* texture28.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BB015EA2B4300692D78 /* texture28.jpg */; };
+		FA771BD215EA2B4300692D78 /* texture29.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BB115EA2B4300692D78 /* texture29.jpg */; };
+		FA771BD315EA2B4300692D78 /* texture3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BB215EA2B4300692D78 /* texture3.jpg */; };
+		FA771BD415EA2B4300692D78 /* texture30.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BB315EA2B4300692D78 /* texture30.jpg */; };
+		FA771BD515EA2B4300692D78 /* texture31.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BB415EA2B4300692D78 /* texture31.jpg */; };
+		FA771BD615EA2B4300692D78 /* texture32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BB515EA2B4300692D78 /* texture32.jpg */; };
+		FA771BD715EA2B4300692D78 /* texture4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BB615EA2B4300692D78 /* texture4.jpg */; };
+		FA771BD815EA2B4300692D78 /* texture5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BB715EA2B4300692D78 /* texture5.jpg */; };
+		FA771BD915EA2B4300692D78 /* texture6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BB815EA2B4300692D78 /* texture6.jpg */; };
+		FA771BDA15EA2B4300692D78 /* texture7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BB915EA2B4300692D78 /* texture7.jpg */; };
+		FA771BDB15EA2B4300692D78 /* texture8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BBA15EA2B4300692D78 /* texture8.jpg */; };
+		FA771BDC15EA2B4300692D78 /* texture9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771BBB15EA2B4300692D78 /* texture9.jpg */; };
+		FA7AA68615EC238200E1DD69 /* cube.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA7AA68515EC238200E1DD69 /* cube.pod */; };
+		FA7ABD3C15EC47CC00AD5273 /* rock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA7ABD3A15EC47CC00AD5273 /* rock.jpg */; };
+		FA7ABD3D15EC47CC00AD5273 /* rock.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA7ABD3B15EC47CC00AD5273 /* rock.pod */; };
 		FAA64B9415BEFFB300C6A97A /* btAxisSweep3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA64A6D15BEFFB300C6A97A /* btAxisSweep3.cpp */; };
 		FAA64B9515BEFFB300C6A97A /* btBroadphaseProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA64A7015BEFFB300C6A97A /* btBroadphaseProxy.cpp */; };
 		FAA64B9615BEFFB300C6A97A /* btCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA64A7215BEFFB300C6A97A /* btCollisionAlgorithm.cpp */; };
@@ -437,10 +485,6 @@
 		CE8C797115BFC8D0007230C6 /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
 		CE966ED915D38C82005047DD /* PodHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodHelper.h; sourceTree = "<group>"; };
 		CE966EDA15D38C82005047DD /* PodHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PodHelper.mm; sourceTree = "<group>"; };
-		CE9826AF15E34D3E0022891D /* TerrainForest.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = TerrainForest.pod; sourceTree = "<group>"; };
-		CE9826B415E35B320022891D /* AshTex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AshTex.png; sourceTree = "<group>"; };
-		CE9826B615E35C550022891D /* AshTree.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = AshTree.pod; sourceTree = "<group>"; };
-		CE9826B815E35DD10022891D /* 3D Cartoon Character Mickey.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3D Cartoon Character Mickey.pod"; sourceTree = "<group>"; };
 		CE9826E115E373A80022891D /* model.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.pod; sourceTree = "<group>"; };
 		CE992A1815B7FF5A00A2A297 /* TheBallRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBallRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE992A1C15B7FF5A00A2A297 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -893,6 +937,58 @@
 		CEE0D23315D0E1E300ABBA1E /* MainGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainGame.m; sourceTree = "<group>"; };
 		CEE0D23515D0E21400ABBA1E /* AbstractStaticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractStaticObject.h; sourceTree = "<group>"; };
 		CEE0D23615D0E21400ABBA1E /* AbstractStaticObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractStaticObject.m; sourceTree = "<group>"; };
+		FA75E21115EA369A002CADD0 /* Stargate.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stargate.pod; sourceTree = "<group>"; };
+		FA75E21315EA36A8002CADD0 /* Event_Horizon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Event_Horizon.jpg; sourceTree = "<group>"; };
+		FA75E21415EA36A8002CADD0 /* Material1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Material1.jpg; sourceTree = "<group>"; };
+		FA75E21515EA36A8002CADD0 /* Material2noCulling.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Material2noCulling.jpg; sourceTree = "<group>"; };
+		FA75E21615EA36A8002CADD0 /* stargate2_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stargate2_1.jpg; sourceTree = "<group>"; };
+		FA75E21715EA36A8002CADD0 /* stargate2noCulling.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stargate2noCulling.jpg; sourceTree = "<group>"; };
+		FA75E21815EA36A8002CADD0 /* stargate2x01_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stargate2x01_1.jpg; sourceTree = "<group>"; };
+		FA75E21915EA36A9002CADD0 /* stargate2x01noCulling.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stargate2x01noCulling.jpg; sourceTree = "<group>"; };
+		FA75E22115EA3B26002CADD0 /* CoconutLeafDead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoconutLeafDead.png; sourceTree = "<group>"; };
+		FA75E22215EA3B26002CADD0 /* CoconutTex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoconutTex.png; sourceTree = "<group>"; };
+		FA75E22315EA3B27002CADD0 /* CoconutTree.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoconutTree.pod; sourceTree = "<group>"; };
+		FA771B9015EA2B2600692D78 /* AshTex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AshTex.png; sourceTree = "<group>"; };
+		FA771B9115EA2B2600692D78 /* AshTree.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = AshTree.pod; sourceTree = "<group>"; };
+		FA771B9415EA2B4300692D78 /* DeadBark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeadBark.jpg; sourceTree = "<group>"; };
+		FA771B9515EA2B4300692D78 /* deadtree.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = deadtree.pod; sourceTree = "<group>"; };
+		FA771B9815EA2B4300692D78 /* ground.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = ground.pod; sourceTree = "<group>"; };
+		FA771B9B15EA2B4300692D78 /* texture0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture0.jpg; sourceTree = "<group>"; };
+		FA771B9C15EA2B4300692D78 /* texture1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture1.jpg; sourceTree = "<group>"; };
+		FA771B9D15EA2B4300692D78 /* texture10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture10.jpg; sourceTree = "<group>"; };
+		FA771B9E15EA2B4300692D78 /* texture11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture11.jpg; sourceTree = "<group>"; };
+		FA771B9F15EA2B4300692D78 /* texture12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture12.jpg; sourceTree = "<group>"; };
+		FA771BA015EA2B4300692D78 /* texture13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture13.jpg; sourceTree = "<group>"; };
+		FA771BA115EA2B4300692D78 /* texture14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture14.jpg; sourceTree = "<group>"; };
+		FA771BA215EA2B4300692D78 /* texture15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture15.jpg; sourceTree = "<group>"; };
+		FA771BA315EA2B4300692D78 /* texture16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture16.jpg; sourceTree = "<group>"; };
+		FA771BA415EA2B4300692D78 /* texture17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture17.jpg; sourceTree = "<group>"; };
+		FA771BA515EA2B4300692D78 /* texture18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture18.jpg; sourceTree = "<group>"; };
+		FA771BA615EA2B4300692D78 /* texture19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture19.jpg; sourceTree = "<group>"; };
+		FA771BA715EA2B4300692D78 /* texture2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture2.jpg; sourceTree = "<group>"; };
+		FA771BA815EA2B4300692D78 /* texture20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture20.jpg; sourceTree = "<group>"; };
+		FA771BA915EA2B4300692D78 /* texture21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture21.jpg; sourceTree = "<group>"; };
+		FA771BAA15EA2B4300692D78 /* texture22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture22.jpg; sourceTree = "<group>"; };
+		FA771BAB15EA2B4300692D78 /* texture23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture23.jpg; sourceTree = "<group>"; };
+		FA771BAC15EA2B4300692D78 /* texture24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture24.jpg; sourceTree = "<group>"; };
+		FA771BAD15EA2B4300692D78 /* texture25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture25.jpg; sourceTree = "<group>"; };
+		FA771BAE15EA2B4300692D78 /* texture26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture26.jpg; sourceTree = "<group>"; };
+		FA771BAF15EA2B4300692D78 /* texture27.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture27.jpg; sourceTree = "<group>"; };
+		FA771BB015EA2B4300692D78 /* texture28.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture28.jpg; sourceTree = "<group>"; };
+		FA771BB115EA2B4300692D78 /* texture29.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture29.jpg; sourceTree = "<group>"; };
+		FA771BB215EA2B4300692D78 /* texture3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture3.jpg; sourceTree = "<group>"; };
+		FA771BB315EA2B4300692D78 /* texture30.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture30.jpg; sourceTree = "<group>"; };
+		FA771BB415EA2B4300692D78 /* texture31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture31.jpg; sourceTree = "<group>"; };
+		FA771BB515EA2B4300692D78 /* texture32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture32.jpg; sourceTree = "<group>"; };
+		FA771BB615EA2B4300692D78 /* texture4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture4.jpg; sourceTree = "<group>"; };
+		FA771BB715EA2B4300692D78 /* texture5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture5.jpg; sourceTree = "<group>"; };
+		FA771BB815EA2B4300692D78 /* texture6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture6.jpg; sourceTree = "<group>"; };
+		FA771BB915EA2B4300692D78 /* texture7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture7.jpg; sourceTree = "<group>"; };
+		FA771BBA15EA2B4300692D78 /* texture8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture8.jpg; sourceTree = "<group>"; };
+		FA771BBB15EA2B4300692D78 /* texture9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture9.jpg; sourceTree = "<group>"; };
+		FA7AA68515EC238200E1DD69 /* cube.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = cube.pod; sourceTree = "<group>"; };
+		FA7ABD3A15EC47CC00AD5273 /* rock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock.jpg; sourceTree = "<group>"; };
+		FA7ABD3B15EC47CC00AD5273 /* rock.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = rock.pod; sourceTree = "<group>"; };
 		FAA64A6815BEFFB300C6A97A /* btBulletCollisionCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btBulletCollisionCommon.h; sourceTree = "<group>"; };
 		FAA64A6915BEFFB300C6A97A /* btBulletDynamicsCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btBulletDynamicsCommon.h; sourceTree = "<group>"; };
 		FAA64A6A15BEFFB300C6A97A /* Bullet-C-Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bullet-C-Api.h"; sourceTree = "<group>"; };
@@ -2232,11 +2328,27 @@
 		CE992EA915B813B700A2A297 /* pods */ = {
 			isa = PBXGroup;
 			children = (
+				FA7ABD3A15EC47CC00AD5273 /* rock.jpg */,
+				FA7ABD3B15EC47CC00AD5273 /* rock.pod */,
+				FA7AA68515EC238200E1DD69 /* cube.pod */,
+				FA75E22115EA3B26002CADD0 /* CoconutLeafDead.png */,
+				FA75E22215EA3B26002CADD0 /* CoconutTex.png */,
+				FA75E22315EA3B27002CADD0 /* CoconutTree.pod */,
+				FA75E21315EA36A8002CADD0 /* Event_Horizon.jpg */,
+				FA75E21415EA36A8002CADD0 /* Material1.jpg */,
+				FA75E21515EA36A8002CADD0 /* Material2noCulling.jpg */,
+				FA75E21615EA36A8002CADD0 /* stargate2_1.jpg */,
+				FA75E21715EA36A8002CADD0 /* stargate2noCulling.jpg */,
+				FA75E21815EA36A8002CADD0 /* stargate2x01_1.jpg */,
+				FA75E21915EA36A9002CADD0 /* stargate2x01noCulling.jpg */,
+				FA75E21115EA369A002CADD0 /* Stargate.pod */,
+				FA771B9A15EA2B4300692D78 /* images */,
+				FA771B9815EA2B4300692D78 /* ground.pod */,
+				FA771B9415EA2B4300692D78 /* DeadBark.jpg */,
+				FA771B9515EA2B4300692D78 /* deadtree.pod */,
+				FA771B9015EA2B2600692D78 /* AshTex.png */,
+				FA771B9115EA2B2600692D78 /* AshTree.pod */,
 				CE9826E115E373A80022891D /* model.pod */,
-				CE9826B815E35DD10022891D /* 3D Cartoon Character Mickey.pod */,
-				CE9826B615E35C550022891D /* AshTree.pod */,
-				CE9826B415E35B320022891D /* AshTex.png */,
-				CE9826AF15E34D3E0022891D /* TerrainForest.pod */,
 				CE992EAA15B813B800A2A297 /* man.pod */,
 				CE992EAB15B813B800A2A297 /* Scene_float.pod */,
 			);
@@ -2250,6 +2362,46 @@
 				CECD806115C925F80059385D /* Const.h */,
 			);
 			path = Define;
+			sourceTree = "<group>";
+		};
+		FA771B9A15EA2B4300692D78 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FA771B9B15EA2B4300692D78 /* texture0.jpg */,
+				FA771B9C15EA2B4300692D78 /* texture1.jpg */,
+				FA771B9D15EA2B4300692D78 /* texture10.jpg */,
+				FA771B9E15EA2B4300692D78 /* texture11.jpg */,
+				FA771B9F15EA2B4300692D78 /* texture12.jpg */,
+				FA771BA015EA2B4300692D78 /* texture13.jpg */,
+				FA771BA115EA2B4300692D78 /* texture14.jpg */,
+				FA771BA215EA2B4300692D78 /* texture15.jpg */,
+				FA771BA315EA2B4300692D78 /* texture16.jpg */,
+				FA771BA415EA2B4300692D78 /* texture17.jpg */,
+				FA771BA515EA2B4300692D78 /* texture18.jpg */,
+				FA771BA615EA2B4300692D78 /* texture19.jpg */,
+				FA771BA715EA2B4300692D78 /* texture2.jpg */,
+				FA771BA815EA2B4300692D78 /* texture20.jpg */,
+				FA771BA915EA2B4300692D78 /* texture21.jpg */,
+				FA771BAA15EA2B4300692D78 /* texture22.jpg */,
+				FA771BAB15EA2B4300692D78 /* texture23.jpg */,
+				FA771BAC15EA2B4300692D78 /* texture24.jpg */,
+				FA771BAD15EA2B4300692D78 /* texture25.jpg */,
+				FA771BAE15EA2B4300692D78 /* texture26.jpg */,
+				FA771BAF15EA2B4300692D78 /* texture27.jpg */,
+				FA771BB015EA2B4300692D78 /* texture28.jpg */,
+				FA771BB115EA2B4300692D78 /* texture29.jpg */,
+				FA771BB215EA2B4300692D78 /* texture3.jpg */,
+				FA771BB315EA2B4300692D78 /* texture30.jpg */,
+				FA771BB415EA2B4300692D78 /* texture31.jpg */,
+				FA771BB515EA2B4300692D78 /* texture32.jpg */,
+				FA771BB615EA2B4300692D78 /* texture4.jpg */,
+				FA771BB715EA2B4300692D78 /* texture5.jpg */,
+				FA771BB815EA2B4300692D78 /* texture6.jpg */,
+				FA771BB915EA2B4300692D78 /* texture7.jpg */,
+				FA771BBA15EA2B4300692D78 /* texture8.jpg */,
+				FA771BBB15EA2B4300692D78 /* texture9.jpg */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		FAA64A6715BEFFB300C6A97A /* bullet */ = {
@@ -2825,11 +2977,59 @@
 				CE8C797D15BFC8D3007230C6 /* player_side_2.png in Resources */,
 				CE8C797E15BFC8D3007230C6 /* player_side_3.png in Resources */,
 				CE8C797F15BFC8D3007230C6 /* wall.png in Resources */,
-				CE9826B015E34D3E0022891D /* TerrainForest.pod in Resources */,
-				CE9826B515E35B320022891D /* AshTex.png in Resources */,
-				CE9826B715E35C550022891D /* AshTree.pod in Resources */,
-				CE9826B915E35DD10022891D /* 3D Cartoon Character Mickey.pod in Resources */,
 				CE9826E215E373A80022891D /* model.pod in Resources */,
+				FA771B9215EA2B2600692D78 /* AshTex.png in Resources */,
+				FA771B9315EA2B2600692D78 /* AshTree.pod in Resources */,
+				FA771B9615EA2B4300692D78 /* DeadBark.jpg in Resources */,
+				FA771B9715EA2B4300692D78 /* deadtree.pod in Resources */,
+				FA771B9915EA2B4300692D78 /* ground.pod in Resources */,
+				FA771BBC15EA2B4300692D78 /* texture0.jpg in Resources */,
+				FA771BBD15EA2B4300692D78 /* texture1.jpg in Resources */,
+				FA771BBE15EA2B4300692D78 /* texture10.jpg in Resources */,
+				FA771BBF15EA2B4300692D78 /* texture11.jpg in Resources */,
+				FA771BC015EA2B4300692D78 /* texture12.jpg in Resources */,
+				FA771BC115EA2B4300692D78 /* texture13.jpg in Resources */,
+				FA771BC215EA2B4300692D78 /* texture14.jpg in Resources */,
+				FA771BC315EA2B4300692D78 /* texture15.jpg in Resources */,
+				FA771BC415EA2B4300692D78 /* texture16.jpg in Resources */,
+				FA771BC515EA2B4300692D78 /* texture17.jpg in Resources */,
+				FA771BC615EA2B4300692D78 /* texture18.jpg in Resources */,
+				FA771BC715EA2B4300692D78 /* texture19.jpg in Resources */,
+				FA771BC815EA2B4300692D78 /* texture2.jpg in Resources */,
+				FA771BC915EA2B4300692D78 /* texture20.jpg in Resources */,
+				FA771BCA15EA2B4300692D78 /* texture21.jpg in Resources */,
+				FA771BCB15EA2B4300692D78 /* texture22.jpg in Resources */,
+				FA771BCC15EA2B4300692D78 /* texture23.jpg in Resources */,
+				FA771BCD15EA2B4300692D78 /* texture24.jpg in Resources */,
+				FA771BCE15EA2B4300692D78 /* texture25.jpg in Resources */,
+				FA771BCF15EA2B4300692D78 /* texture26.jpg in Resources */,
+				FA771BD015EA2B4300692D78 /* texture27.jpg in Resources */,
+				FA771BD115EA2B4300692D78 /* texture28.jpg in Resources */,
+				FA771BD215EA2B4300692D78 /* texture29.jpg in Resources */,
+				FA771BD315EA2B4300692D78 /* texture3.jpg in Resources */,
+				FA771BD415EA2B4300692D78 /* texture30.jpg in Resources */,
+				FA771BD515EA2B4300692D78 /* texture31.jpg in Resources */,
+				FA771BD615EA2B4300692D78 /* texture32.jpg in Resources */,
+				FA771BD715EA2B4300692D78 /* texture4.jpg in Resources */,
+				FA771BD815EA2B4300692D78 /* texture5.jpg in Resources */,
+				FA771BD915EA2B4300692D78 /* texture6.jpg in Resources */,
+				FA771BDA15EA2B4300692D78 /* texture7.jpg in Resources */,
+				FA771BDB15EA2B4300692D78 /* texture8.jpg in Resources */,
+				FA771BDC15EA2B4300692D78 /* texture9.jpg in Resources */,
+				FA75E21215EA369A002CADD0 /* Stargate.pod in Resources */,
+				FA75E21A15EA36A9002CADD0 /* Event_Horizon.jpg in Resources */,
+				FA75E21B15EA36A9002CADD0 /* Material1.jpg in Resources */,
+				FA75E21C15EA36A9002CADD0 /* Material2noCulling.jpg in Resources */,
+				FA75E21D15EA36A9002CADD0 /* stargate2_1.jpg in Resources */,
+				FA75E21E15EA36A9002CADD0 /* stargate2noCulling.jpg in Resources */,
+				FA75E21F15EA36A9002CADD0 /* stargate2x01_1.jpg in Resources */,
+				FA75E22015EA36A9002CADD0 /* stargate2x01noCulling.jpg in Resources */,
+				FA75E22415EA3B27002CADD0 /* CoconutLeafDead.png in Resources */,
+				FA75E22515EA3B27002CADD0 /* CoconutTex.png in Resources */,
+				FA75E22615EA3B27002CADD0 /* CoconutTree.pod in Resources */,
+				FA7AA68615EC238200E1DD69 /* cube.pod in Resources */,
+				FA7ABD3C15EC47CC00AD5273 /* rock.jpg in Resources */,
+				FA7ABD3D15EC47CC00AD5273 /* rock.pod in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
