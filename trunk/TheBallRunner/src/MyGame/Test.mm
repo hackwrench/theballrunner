@@ -125,7 +125,7 @@
         [self createPodAnimation];
         
         //create obstacle
-        //[self createObstacle];
+        [self createObstacle];
         
         
         //light setting
@@ -352,12 +352,20 @@
 - (void)createPodAnimation
 {
     
-    Isgl3dPODImporter *_importer = [Isgl3dPODImporter podImporterWithFile:@"model.pod"];
+    Isgl3dPODImporter *_importer = [Isgl3dPODImporter podImporterWithFile:@"rock.pod"];
     [_importer printPODInfo];
     Isgl3dNode *_node = [self.scene createNode];
-    [_importer addMeshesToScene:_node];
-    //[_node setPosition:iv3(0,5,0)];
-    //[_node setScale:1000];
+    [_importer addMeshesToScene:self.scene];
+    Isgl3dMeshNode* _teapotMeshNode = [_importer meshNodeWithName:@"rock-node"];
+    [_teapotMeshNode setScale:1];
+    btCollisionShape* _teapotShape = [PodHelper getCollisionShapeForNode:_teapotMeshNode];
+    _teapotShape->setLocalScaling(btVector3(1, 1, 1));
+    //create physic object
+    [self createPhysicsObject:_teapotMeshNode shape:_teapotShape mass:500 restitution:0.4 isFalling:YES];
+    [_teapotMeshNode setPosition:iv3(0,0,0)];
+    //[_node setPosition:iv3(0,-100,0)];
+    //[_node setScale:10];
+   
     
     /*Isgl3dPODImporter * importer = [Isgl3dPODImporter podImporterWithFile:@"Scene_float.pod"];
     [importer printPODInfo];
@@ -371,8 +379,8 @@
     [_teapotMeshNode setPosition:iv3(0,0,-PLANE_WIDTH/2 + 80)];*/
     
         
-    /*Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:@"man.pod"];
-    [importer printPODInfo];
+   /* Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:@"man.pod"];
+    //[importer printPODInfo];
     // Modify texture files
     //get pod file to project
     [podImporter modifyTexture:@"body.bmp" withTexture:@"Body.pvr"];
