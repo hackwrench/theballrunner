@@ -115,17 +115,16 @@
         [self createPlaneWith:PLANE_WIDTH _height:PLANE_HEIGH];
         
         // create player
-        _ballstartPos = iv3(0,5,-PLANE_WIDTH/2 + 80 );
+        _ballstartPos = iv3(0,10,-200 );
         [self createPlayerWithPos:_ballstartPos andRadius:1];
         
         //create animation
         [self createPodAnimation];
         
         //create obstacle
-        [self createObstacle];
+        //[self createObstacle];
         
-        
-        //light setting
+                //light setting
 		_light  = [[Isgl3dShadowCastingLight alloc] initWithHexColor:@"111111" diffuseColor:@"FFFFFF" specularColor:@"FFFFFF" attenuation:0.03];
 		[self.scene addChild:_light];
 		_light.position = iv3(10, 100, 10);
@@ -348,17 +347,19 @@
 //================== create pod animation ===================//
 - (void)createPodAnimation
 {
-    Isgl3dPODImporter *_importer = [Isgl3dPODImporter podImporterWithFile:@"rock.pod"];
+    Isgl3dPODImporter *_importer = [Isgl3dPODImporter podImporterWithFile:@"cube.pod"];
     [_importer printPODInfo];
-    [_importer addMeshesToScene:self.scene];
-    
-    /*Isgl3dMeshNode* _teapotMeshNode = [_importer meshNodeWithName:@"rock-node"];
-    [_teapotMeshNode setScale:1];
+    //[_importer addMeshesToScene:self.scene];
+    Isgl3dMeshNode* modelNode = [[Isgl3dMeshNode alloc] init];
+    [_importer addMeshesToScene:modelNode];
+    [self.scene addChild:modelNode];
+    Isgl3dMeshNode* _teapotMeshNode = [_importer meshNodeWithName:@"Cube"];
+    [_teapotMeshNode setScale:10];
     btCollisionShape* _teapotShape = [PodHelper getCollisionShapeForNode:_teapotMeshNode];
-    _teapotShape->setLocalScaling(btVector3(1, 1, 1));
+    _teapotShape->setLocalScaling(btVector3(10, 10, 10));
     //create physic object
     [self createPhysicsObject:_teapotMeshNode shape:_teapotShape mass:500 restitution:0.4 isFalling:YES];
-    [_teapotMeshNode setPosition:iv3(0,0,0)];*/
+    [_teapotMeshNode setPosition:iv3(0,10,0)];
     
     /*Isgl3dPODImporter * importer = [Isgl3dPODImporter podImporterWithFile:@"Scene_float.pod"];
     [importer printPODInfo];
@@ -449,19 +450,16 @@
     [self.camera setPosition:iv3(0,_ballNode.position.y+2,_ballNode.position.z-7)];
     [self.camera setLookAt:_ballNode.position];
     
-    
 }
 
 //============== create sphere ========================
 - (void) createSphere 
 {
-	
 	btCollisionShape * sphereShape = new btSphereShape(_sphereMesh.radius);
 	Isgl3dMeshNode * node = [_spheresNode createNodeWithMesh:_sphereMesh andMaterial:_beachBallMaterial];
 	[self createPhysicsObject:node shape:sphereShape mass:0.5 restitution:0.9 isFalling:YES]; 
     
 	node.enableShadowCasting = YES;
-	
 }
 
 //=============== create cube =========================
@@ -479,7 +477,6 @@
 //================= create obstacle ===================
 - (void) createObstacle
 {
-    
     Isgl3dTextureMaterial * _material = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"Bricks-Red.jpg" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:YES repeatY:YES];
     
     _standardMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"Bricks-Red.jpg" shininess:0.9];
@@ -495,7 +492,6 @@
         [self createPhysicsObject:wallNode shape:_obstacleShape mass:0 restitution:0.6 isFalling:NO];
         
     }
-    
     
 }
 
@@ -522,14 +518,11 @@
 	return [physicsObject autorelease];
 }
 
-
 //===============create player==========================
 -(Isgl3dPhysicsObject3D *) createPlayer:(Isgl3dMeshNode *)node shape:(btCollisionShape *)shape mass:(float)mass restitution:(float)restitution isFalling:(BOOL)isFalling
 {
     // [node setPositionValues:0 y:5 z:-50];
-    
 	Isgl3dMotionState * motionState = new Isgl3dMotionState(node);
-    
 	btVector3 localInertia(0, 0, 0);
     
 	shape->calculateLocalInertia(mass, localInertia);
@@ -559,10 +552,8 @@
 
 - (void) dealloc
 {
-	
     
     [_animationController release];
-    
 	delete _discreteDynamicsWorld;
 	delete _collisionConfig;
 	delete _broadphase;
