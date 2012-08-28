@@ -20,7 +20,7 @@
 
 
 #define PLANE_WIDTH 500
-#define PLANE_HEIGH 50
+#define PLANE_HEIGH 30
 
 
 @interface Test (PrivateMethods)
@@ -57,7 +57,6 @@
         
 	 	srandom(time(NULL));
         
-        
         //set start game
         _isStart=NO;
         _isMoving =NO;
@@ -93,9 +92,7 @@
 		[_physicsWorld setDiscreteDynamicsWorld:_discreteDynamicsWorld];
 		[self.scene addChild:_physicsWorld];
         
-        
-        
-		// Create textures - matearial
+        // Create textures - matearial
 		_isglLogo = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"crate.png" shininess:0.9 precision:Isgl3dTexturePrecisionMedium repeatX:NO repeatY:NO];
         _standardMaterial = [[Isgl3dTextureMaterial alloc] initWithTextureFile:@"cardboard.png" shininess:0.9];
     
@@ -351,21 +348,17 @@
 //================== create pod animation ===================//
 - (void)createPodAnimation
 {
-    
     Isgl3dPODImporter *_importer = [Isgl3dPODImporter podImporterWithFile:@"rock.pod"];
     [_importer printPODInfo];
-    Isgl3dNode *_node = [self.scene createNode];
     [_importer addMeshesToScene:self.scene];
-    Isgl3dMeshNode* _teapotMeshNode = [_importer meshNodeWithName:@"rock-node"];
+    
+    /*Isgl3dMeshNode* _teapotMeshNode = [_importer meshNodeWithName:@"rock-node"];
     [_teapotMeshNode setScale:1];
     btCollisionShape* _teapotShape = [PodHelper getCollisionShapeForNode:_teapotMeshNode];
     _teapotShape->setLocalScaling(btVector3(1, 1, 1));
     //create physic object
     [self createPhysicsObject:_teapotMeshNode shape:_teapotShape mass:500 restitution:0.4 isFalling:YES];
-    [_teapotMeshNode setPosition:iv3(0,0,0)];
-    //[_node setPosition:iv3(0,-100,0)];
-    //[_node setScale:10];
-   
+    [_teapotMeshNode setPosition:iv3(0,0,0)];*/
     
     /*Isgl3dPODImporter * importer = [Isgl3dPODImporter podImporterWithFile:@"Scene_float.pod"];
     [importer printPODInfo];
@@ -378,8 +371,7 @@
     [self createPhysicsObject:_teapotMeshNode shape:_teapotShape mass:500 restitution:0.4 isFalling:YES];
     [_teapotMeshNode setPosition:iv3(0,0,-PLANE_WIDTH/2 + 80)];*/
     
-        
-   /* Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:@"man.pod"];
+    /* Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:@"man.pod"];
     //[importer printPODInfo];
     // Modify texture files
     //get pod file to project
@@ -387,27 +379,24 @@
     [podImporter modifyTexture:@"legs.bmp" withTexture:@"Legs.pvr"];
     [podImporter modifyTexture:@"belt.bmp" withTexture:@"Belt.pvr"];
    
-    
     //create nod --> add meshnode from podimpoter
     Isgl3dNode *man = [self.scene createNode];
     [podImporter addMeshesToScene:man];
     [man setPosition:iv3(0,0,-350)];
     [man setScale:0.05];
-    //[man setRotationY:90];
-    
+    [man setRotationY:90];
     
     //create collision shape with convexshape
     //btConvexShape* _shape = new bt
     
-	
     // Create skeleton node	
     Isgl3dSkeletonNode * skeleton = [self.scene createSkeletonNode];
-    skeleton.position = iv3(0, 0 , -450);
+    skeleton.position = iv3(0, 0 , -PLANE_WIDTH/2);
     [skeleton setScale:0.05];
     //run action
-    id action0 = [Isgl3dActionMoveTo actionWithDuration:60 position:iv3(0,0,500)];
+    id action0 = [Isgl3dActionMoveTo actionWithDuration:60 position:iv3(0,0,PLANE_WIDTH/2)];
     id action1 = [Isgl3dActionRotateYBy actionWithDuration:1 angle:180];
-    id action2 = [Isgl3dActionMoveTo actionWithDuration:60 position:iv3(0,0,-400)];
+    id action2 = [Isgl3dActionMoveTo actionWithDuration:60 position:iv3(0,0,-PLANE_WIDTH/2)];
     id sequence= [Isgl3dActionSequence actionWithActionsArray:[NSArray arrayWithObjects:action0,action1,action2, nil]];
     [skeleton runAction:sequence];
     
@@ -416,14 +405,10 @@
     [skeleton setAlphaWithChildren:1];
     [podImporter addBonesToSkeleton:skeleton];
     [skeleton enableShadowCastingWithChildren:YES];
-
     
-	
     // Add animation controller
     _animationController = [[Isgl3dAnimationController alloc] initWithSkeleton:skeleton andNumberOfFrames:[podImporter numberOfFrames]];
     [_animationController start];*/
-	
-
 }
 
 //================ create player ===========================//
@@ -443,7 +428,6 @@
     
     //create meshnode 
     _ballNode = [_spheresNode createNodeWithMesh:_sphereMesh andMaterial:_beachBallMaterial];
-    
     
     _ballNode.interactive = YES;
     _ballNode.position = pos;

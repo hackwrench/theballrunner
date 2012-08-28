@@ -304,11 +304,8 @@
 		FA75E22415EA3B27002CADD0 /* CoconutLeafDead.png in Resources */ = {isa = PBXBuildFile; fileRef = FA75E22115EA3B26002CADD0 /* CoconutLeafDead.png */; };
 		FA75E22515EA3B27002CADD0 /* CoconutTex.png in Resources */ = {isa = PBXBuildFile; fileRef = FA75E22215EA3B26002CADD0 /* CoconutTex.png */; };
 		FA75E22615EA3B27002CADD0 /* CoconutTree.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA75E22315EA3B27002CADD0 /* CoconutTree.pod */; };
-		FA771B9215EA2B2600692D78 /* AshTex.png in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9015EA2B2600692D78 /* AshTex.png */; };
-		FA771B9315EA2B2600692D78 /* AshTree.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9115EA2B2600692D78 /* AshTree.pod */; };
 		FA771B9615EA2B4300692D78 /* DeadBark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9415EA2B4300692D78 /* DeadBark.jpg */; };
 		FA771B9715EA2B4300692D78 /* deadtree.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9515EA2B4300692D78 /* deadtree.pod */; };
-		FA771B9915EA2B4300692D78 /* ground.pod in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9815EA2B4300692D78 /* ground.pod */; };
 		FA771BBC15EA2B4300692D78 /* texture0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9B15EA2B4300692D78 /* texture0.jpg */; };
 		FA771BBD15EA2B4300692D78 /* texture1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9C15EA2B4300692D78 /* texture1.jpg */; };
 		FA771BBE15EA2B4300692D78 /* texture10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA771B9D15EA2B4300692D78 /* texture10.jpg */; };
@@ -948,11 +945,8 @@
 		FA75E22115EA3B26002CADD0 /* CoconutLeafDead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoconutLeafDead.png; sourceTree = "<group>"; };
 		FA75E22215EA3B26002CADD0 /* CoconutTex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoconutTex.png; sourceTree = "<group>"; };
 		FA75E22315EA3B27002CADD0 /* CoconutTree.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoconutTree.pod; sourceTree = "<group>"; };
-		FA771B9015EA2B2600692D78 /* AshTex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AshTex.png; sourceTree = "<group>"; };
-		FA771B9115EA2B2600692D78 /* AshTree.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = AshTree.pod; sourceTree = "<group>"; };
 		FA771B9415EA2B4300692D78 /* DeadBark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeadBark.jpg; sourceTree = "<group>"; };
 		FA771B9515EA2B4300692D78 /* deadtree.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = deadtree.pod; sourceTree = "<group>"; };
-		FA771B9815EA2B4300692D78 /* ground.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = ground.pod; sourceTree = "<group>"; };
 		FA771B9B15EA2B4300692D78 /* texture0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture0.jpg; sourceTree = "<group>"; };
 		FA771B9C15EA2B4300692D78 /* texture1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture1.jpg; sourceTree = "<group>"; };
 		FA771B9D15EA2B4300692D78 /* texture10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture10.jpg; sourceTree = "<group>"; };
@@ -2343,11 +2337,8 @@
 				FA75E21915EA36A9002CADD0 /* stargate2x01noCulling.jpg */,
 				FA75E21115EA369A002CADD0 /* Stargate.pod */,
 				FA771B9A15EA2B4300692D78 /* images */,
-				FA771B9815EA2B4300692D78 /* ground.pod */,
 				FA771B9415EA2B4300692D78 /* DeadBark.jpg */,
 				FA771B9515EA2B4300692D78 /* deadtree.pod */,
-				FA771B9015EA2B2600692D78 /* AshTex.png */,
-				FA771B9115EA2B2600692D78 /* AshTree.pod */,
 				CE9826E115E373A80022891D /* model.pod */,
 				CE992EAA15B813B800A2A297 /* man.pod */,
 				CE992EAB15B813B800A2A297 /* Scene_float.pod */,
@@ -2978,11 +2969,8 @@
 				CE8C797E15BFC8D3007230C6 /* player_side_3.png in Resources */,
 				CE8C797F15BFC8D3007230C6 /* wall.png in Resources */,
 				CE9826E215E373A80022891D /* model.pod in Resources */,
-				FA771B9215EA2B2600692D78 /* AshTex.png in Resources */,
-				FA771B9315EA2B2600692D78 /* AshTree.pod in Resources */,
 				FA771B9615EA2B4300692D78 /* DeadBark.jpg in Resources */,
 				FA771B9715EA2B4300692D78 /* deadtree.pod in Resources */,
-				FA771B9915EA2B4300692D78 /* ground.pod in Resources */,
 				FA771BBC15EA2B4300692D78 /* texture0.jpg in Resources */,
 				FA771BBD15EA2B4300692D78 /* texture1.jpg in Resources */,
 				FA771BBE15EA2B4300692D78 /* texture10.jpg in Resources */,
