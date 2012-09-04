@@ -18,3 +18,13 @@ enum EnumObjectTag
     EnumObjSphereTag,
     
 };
+
+enum EnumGameScene
+{
+    EnumGamePlayScene,
+    EnumGameMenuScene,
+    EnumGameFinishScene,
+    EnumGameLevelSelectScene,
+    EnumGameOptionScene,
+    EnumGameHelpScene,
+};

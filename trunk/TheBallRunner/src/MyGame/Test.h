@@ -29,7 +29,6 @@ class btCollisionShape;
 @interface Test : Isgl3dBasic3DView <UIGestureRecognizerDelegate>
 {
     
-    
     UITapGestureRecognizer *_sceneTapGestureRecognizer;
     UITapGestureRecognizer *_nodeTapGestureRecognizer;
     UIPinchGestureRecognizer *_pinchGestureRecognizer;
