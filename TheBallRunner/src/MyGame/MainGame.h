@@ -7,7 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "isgl3d.h"
+#import "Isgl3dViewController.h"
+#import "Isgl3dView.h"
+#import "Const.h"
 
 @interface MainGame : NSObject
+{
+    BOOL _isPlay;
+    BOOL _isStop;
+    BOOL _isPause;
+}
+
++ (MainGame*)getInstance;
+- (void)runScene:(enum EnumGameScene)scene;
 
 @end

@@ -347,16 +347,16 @@
 //================== create pod animation ===================//
 - (void)createPodAnimation
 {
-    Isgl3dPODImporter *_importer = [Isgl3dPODImporter podImporterWithFile:@"cube.pod"];
+    Isgl3dPODImporter *_importer = [Isgl3dPODImporter podImporterWithFile:@"rock.pod"];
     [_importer printPODInfo];
     //[_importer addMeshesToScene:self.scene];
     Isgl3dMeshNode* modelNode = [[Isgl3dMeshNode alloc] init];
     [_importer addMeshesToScene:modelNode];
     [self.scene addChild:modelNode];
-    Isgl3dMeshNode* _teapotMeshNode = [_importer meshNodeWithName:@"Cube"];
-    [_teapotMeshNode setScale:10];
+    Isgl3dMeshNode* _teapotMeshNode = [_importer meshNodeWithName:@"rock-node"];
+    [_teapotMeshNode setScale:1];
     btCollisionShape* _teapotShape = [PodHelper getCollisionShapeForNode:_teapotMeshNode];
-    _teapotShape->setLocalScaling(btVector3(10, 10, 10));
+    _teapotShape->setLocalScaling(btVector3(1, 1, 1));
     //create physic object
     [self createPhysicsObject:_teapotMeshNode shape:_teapotShape mass:500 restitution:0.4 isFalling:YES];
     [_teapotMeshNode setPosition:iv3(0,10,0)];
