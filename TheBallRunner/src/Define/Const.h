@@ -10,6 +10,10 @@
 #define OBSTACLE_TAG 202
 #define WALL_TAG 303
 
+
+
+
+
 enum EnumObjectTag 
 {
     EnumObjPlayerTag, 
@@ -27,4 +31,5 @@ enum EnumGameScene
     EnumGameLevelSelectScene,
     EnumGameOptionScene,
     EnumGameHelpScene,
+    EnumGameTest,
 };

@@ -18,7 +18,7 @@
     BOOL _isStop;
     BOOL _isPause;
 }
-
++ (id)alloc;
 + (MainGame*)getInstance;
 - (void)runScene:(enum EnumGameScene)scene;
 
