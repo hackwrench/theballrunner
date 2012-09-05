@@ -10,4 +10,16 @@
 
 @implementation AbstractDynamicObject
 
+/*******************************************************
+ *
+ *
+ *
+ *
+ *
+ */
+- (void)initObjectWith:(Isgl3dVector3*)pos  scale:(float)scale  mass:(float)mass
+{
+    
+}
+
 @end

@@ -33,9 +33,13 @@
     [importer printPODInfo]; 
     return [importer meshNodeWithName:meshName]; 
 }
-
-//Here is the getMinMax method to obtain the points of a mesh node: 
-
+ 
+/****************************************************************************************
+ *Name:getMinMax method to obtain the points of a mesh node
+ *Input:  *Isgl3DMeshNode(Belong to Isgl3Dframework)
+ *Output: *poin array of mesh
+ *
+ ****************************************************************************************/
 + (btVector3*) getMinMax:(Isgl3dMeshNode*)meshNode 
                     minX:(float*)minX 
                     maxX:(float*)maxX 

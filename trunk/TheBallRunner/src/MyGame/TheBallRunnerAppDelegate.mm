@@ -12,6 +12,7 @@
 #import "HelloWorldView.h"
 #import "Isgl3d.h"
 #import "Test.h"
+#import "MainGame.h"
 
 @implementation TheBallRunnerAppDelegate
 
@@ -61,11 +62,8 @@
 	[_window addSubview:_viewController.view];
 	[_window makeKeyAndVisible];
 
-	// Creates the view(s) and adds them to the director
-	[[Isgl3dDirector sharedInstance] addView:[Test view]];
-	
-	// Run the director
-	[[Isgl3dDirector sharedInstance] run];
+    //get main game to run game scene
+    [[MainGame getInstance] runScene:EnumGameTest];
 }
 
 - (void) dealloc 
