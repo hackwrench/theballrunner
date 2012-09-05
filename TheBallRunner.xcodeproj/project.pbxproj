@@ -706,6 +706,8 @@
 		CE9D7A8115F70F72006AD53E /* TwitteriOS4Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D7A5615F70F72006AD53E /* TwitteriOS4Controller.m */; };
 		CE9D7A8215F70F72006AD53E /* TwitterShare.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D7A5815F70F72006AD53E /* TwitterShare.m */; };
 		CE9D7A8315F70F72006AD53E /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9D7A5A15F70F72006AD53E /* UIAlertView+Block.m */; };
+		CE9D7A8615F71013006AD53E /* FBConnect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE9D7A8415F71013006AD53E /* FBConnect.bundle */; };
+		CE9D7A8715F71013006AD53E /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE9D7A8515F71013006AD53E /* FBDialog.bundle */; };
 		CEA29DC315ECDD0E003D18C0 /* eames_molded_plastic_side_chair.pod in Resources */ = {isa = PBXBuildFile; fileRef = CEA29DC215ECDD0E003D18C0 /* eames_molded_plastic_side_chair.pod */; };
 		CEE0D22D15D0E1AA00ABBA1E /* AbstractDynamicObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEE0D22C15D0E1AA00ABBA1E /* AbstractDynamicObject.mm */; };
 		CEE0D23115D0E1D000ABBA1E /* GameProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE0D23015D0E1D000ABBA1E /* GameProxy.m */; };
@@ -1454,6 +1456,8 @@
 		CE9D7A5815F70F72006AD53E /* TwitterShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterShare.m; sourceTree = "<group>"; };
 		CE9D7A5915F70F72006AD53E /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
 		CE9D7A5A15F70F72006AD53E /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
+		CE9D7A8415F71013006AD53E /* FBConnect.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBConnect.bundle; sourceTree = "<group>"; };
+		CE9D7A8515F71013006AD53E /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
 		CEA29DC215ECDD0E003D18C0 /* eames_molded_plastic_side_chair.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = eames_molded_plastic_side_chair.pod; sourceTree = "<group>"; };
 		CECD806115C925F80059385D /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		CEE0D22B15D0E1AA00ABBA1E /* AbstractDynamicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractDynamicObject.h; sourceTree = "<group>"; };
@@ -2954,6 +2958,8 @@
 		CE9D79F815F70F72006AD53E /* FBConnect */ = {
 			isa = PBXGroup;
 			children = (
+				CE9D7A8415F71013006AD53E /* FBConnect.bundle */,
+				CE9D7A8515F71013006AD53E /* FBDialog.bundle */,
 				CE9D79F915F70F72006AD53E /* Facebook.h */,
 				CE9D79FA15F70F72006AD53E /* Facebook.m */,
 				CE9D79FB15F70F72006AD53E /* facebook_ios_sdk_Prefix.pch */,
@@ -4642,6 +4648,8 @@
 				CE9D7A6D15F70F72006AD53E /* jQueryInject.txt in Resources */,
 				CE9D7A6E15F70F72006AD53E /* jQueryInjectLandscape.txt in Resources */,
 				CE9D7A8015F70F72006AD53E /* twitter_load.png in Resources */,
+				CE9D7A8615F71013006AD53E /* FBConnect.bundle in Resources */,
+				CE9D7A8715F71013006AD53E /* FBDialog.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
