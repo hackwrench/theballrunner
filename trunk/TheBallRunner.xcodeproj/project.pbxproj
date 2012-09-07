@@ -1465,7 +1465,7 @@
 		CEE0D22F15D0E1D000ABBA1E /* GameProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameProxy.h; sourceTree = "<group>"; };
 		CEE0D23015D0E1D000ABBA1E /* GameProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameProxy.m; sourceTree = "<group>"; };
 		CEE0D23215D0E1E300ABBA1E /* MainGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainGame.h; sourceTree = "<group>"; };
-		CEE0D23315D0E1E300ABBA1E /* MainGame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainGame.mm; path = TheBallRunner/src/MyGame/MainGame.mm; sourceTree = "<group>"; };
+		CEE0D23315D0E1E300ABBA1E /* MainGame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainGame.mm; sourceTree = "<group>"; };
 		CEE0D23515D0E21400ABBA1E /* AbstractStaticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractStaticObject.h; sourceTree = "<group>"; };
 		CEE0D23615D0E21400ABBA1E /* AbstractStaticObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractStaticObject.m; sourceTree = "<group>"; };
 		CEE5EE4615F610C3002F7713 /* ResourceDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceDef.h; sourceTree = "<group>"; };
@@ -2349,7 +2349,6 @@
 				CE9D789E15F700C2006AD53E /* AVFoundation.framework */,
 				CE9D789C15F700A7006AD53E /* AudioToolbox.framework */,
 				CE9D789615F70017006AD53E /* Accounts.framework */,
-				CEE0D23315D0E1E300ABBA1E /* MainGame.mm */,
 				CE9D766915F6FAC1006AD53E /* GameKit.framework */,
 				CE9D766A15F6FAC1006AD53E /* GLKit.framework */,
 				CE9D766B15F6FAC1006AD53E /* libsqlite3.0.dylib */,
@@ -2771,6 +2770,7 @@
 				CEE0D22F15D0E1D000ABBA1E /* GameProxy.h */,
 				CEE0D23015D0E1D000ABBA1E /* GameProxy.m */,
 				CEE0D23215D0E1E300ABBA1E /* MainGame.h */,
+				CEE0D23315D0E1E300ABBA1E /* MainGame.mm */,
 			);
 			path = MyGame;
 			sourceTree = "<group>";
