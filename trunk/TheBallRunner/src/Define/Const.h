@@ -11,6 +11,9 @@
 #define WALL_TAG 303
 
 
+
+
+
 enum EnumObjectTag 
 {
     EnumObjPlayerTag, 
